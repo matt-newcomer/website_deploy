@@ -57,7 +57,7 @@
 &lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;33&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;fs.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;writeFileSync&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;out_filename&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;dom.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;serialize&lt;&#x2F;span&gt;&lt;span&gt;());
 &lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;34&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;});
 &lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;This code is being maintained on &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matt-newcomer&#x2F;katex_injecter&quot;&gt;GitHub&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;This code is available in full on &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matt-newcomer&#x2F;katex_injecter&quot;&gt;GitHub&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </description>
         </item>
         <item>
