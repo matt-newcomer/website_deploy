@@ -1,0 +1,23 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width,initial-scale=1" name="viewport"><meta name="description"><title>mattn | ChatGPT Is a Solution in Search of a Problem</title><style>html {
+            visibility: hidden;
+            opacity: 0;
+        }</style><link href="https://www.mattnewcomer.org/style.css" rel="stylesheet"><link href="https://www.mattnewcomer.org/katex.css" rel="stylesheet"></head><body><header class="space"><a href="https://www.mattnewcomer.org">← Home</a></header><main><h1>ChatGPT Is a Solution in Search of a Problem</h1><p class="secondary">9 February 2023</p><div class="space"></div><p>Recently, large language models (LLMs) have been near the center of the collective consciousness. Numerous humorous and enlightening Twitter threads have been authored about what promise the future holds as the technology improves and the parameter count grows. Not to be a luddite, but I think that the trial-by-fire that we’ve witnessed over the past few months is definitive proof that we need to reevaluate our connection with the technology.</p><h2 id="social-media-as-an-accelerant">Social Media as an Accelerant</h2><h2 id="a-fake-subject-matter-expert">A (Fake) Subject Matter Expert</h2><h2 id="hallucinations">Hallucinations</h2><h2 id="rushing-to-market">Rushing to Market</h2><h2 id="the-attribution-problem">The Attribution Problem</h2><h2 id="is-this-a-good-thing">Is This A Good Thing?</h2></main><div class="dark-mode-buttons"><button class="dark-mode-button" id="dark-mode-on"><img alt="Dark mode" aria-label="dark mode toggle" title="Dark mode" height="24" src="https://www.mattnewcomer.org/dark_mode.svg" width="24"></button><button class="dark-mode-button" id="dark-mode-off"><img alt="Light mode" aria-label="light mode toggle" title="Light mode" height="24" src="https://www.mattnewcomer.org/light_mode.svg" width="24"></button></div><script>const cls = document.body.classList;
+        const getSessionTheme = sessionStorage.getItem("theme");
+        if (getSessionTheme === "dark") {
+            cls.toggle("dark-mode", true);
+        } else if (getSessionTheme === "light") {
+            cls.toggle("dark-mode", false);
+        } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            cls.toggle("dark-mode", true);
+        }
+
+        document.getElementById("dark-mode-on").addEventListener("click", function(e) {
+            cls.toggle("dark-mode", true);
+            sessionStorage.setItem("theme", "dark");
+        });
+        document.getElementById("dark-mode-off").addEventListener("click", function(e) {
+            cls.toggle("dark-mode", false);
+            sessionStorage.setItem("theme", "light");
+        });</script><noscript><style>.dark-mode-buttons {
+                display: none;
+            }</style></noscript></body></html>

@@ -1,0 +1,781 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>mattn</title>
+        <link>https://www.mattnewcomer.org</link>
+        <description></description>
+        <generator>Zola</generator>
+        <language>en</language>
+        <atom:link href="https://www.mattnewcomer.org/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Thu, 09 Feb 2023 00:00:00 +0000</lastBuildDate>
+        <item>
+            <title>ChatGPT Is a Solution in Search of a Problem</title>
+            <pubDate>Thu, 09 Feb 2023 00:00:00 +0000</pubDate>
+            <link>https://www.mattnewcomer.org/blog/2023-02-09-01/</link>
+            <guid>https://www.mattnewcomer.org/blog/2023-02-09-01/</guid>
+            <description>&lt;p&gt;Recently, large language models (LLMs) have been near the center of the collective consciousness. Numerous humorous and enlightening Twitter threads have been authored about what promise the future holds as the technology improves and the parameter count grows. Not to be a luddite, but I think that the trial-by-fire that we’ve witnessed over the past few months is definitive proof that we need to reevaluate our connection with the technology.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;social-media-as-an-accelerant&quot;&gt;Social Media as an Accelerant&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;a-fake-subject-matter-expert&quot;&gt;A (Fake) Subject Matter Expert&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;hallucinations&quot;&gt;Hallucinations&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;rushing-to-market&quot;&gt;Rushing to Market&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;the-attribution-problem&quot;&gt;The Attribution Problem&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;is-this-a-good-thing&quot;&gt;Is This A Good Thing?&lt;&#x2F;h2&gt;
+</description>
+        </item>
+        <item>
+            <title>KaTeX Demonstration</title>
+            <pubDate>Mon, 06 Feb 2023 00:00:00 +0000</pubDate>
+            <link>https://www.mattnewcomer.org/blog/2023-02-06-01/</link>
+            <guid>https://www.mattnewcomer.org/blog/2023-02-06-01/</guid>
+            <description>&lt;p&gt;Because Zola doesn’t support KaTeX out of the box, I ended up writing a JavaScript program to compile and inject it into the DOM before serializing into HTML. Please, enjoy the meta compilation madness.&lt;&#x2F;p&gt;
+&lt;div 
+data-display=&quot;display&quot; 
+class=&quot;math-display-block&quot;&gt;
+TD_{1}(L_{16} \parallel R_{16}) = L_{15} \oplus F(k_{16}, R_{15}) \parallel R_{16} \oplus F(k_{16}, L_{15} \oplus F(k_{16}, R_{15}))
+&lt;&#x2F;div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;div 
+ 
+class=&quot;math-display-block&quot;&gt;
+\omega &#x27; = \omega _0 \sqrt {1 - \left( {\frac{b}{{2m\omega _0 }}} \right)^2 } = \omega _0 \sqrt {1 - \frac{1}{{4Q^2 }}}
+&lt;&#x2F;div&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;div 
+ 
+class=&quot;math-display-block&quot;&gt;
+R = \frac{{2GM}}{{c^2 }}
+&lt;&#x2F;div&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;div 
+ 
+class=&quot;math-display-block&quot;&gt;
+e^{\pi i} + 1 = 0= \cos(\pi) + i \sin(\pi)
+&lt;&#x2F;div&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;div 
+ 
+class=&quot;math-display-block&quot;&gt;
+\int {\tan (ax)} dx = - \frac{1}{a}\ln \left| {\cos (ax)} \right| + c
+&lt;&#x2F;div&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;For those interested, here is the JavaScript that powers the KaTeX generation and DOM injection. &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;kosalab.dev&quot;&gt;Kieran&lt;&#x2F;a&gt; helped me resolve the infinite recursion problem that resulted from using &lt;code&gt;getElementsByClassName()&lt;&#x2F;code&gt;. Many thanks!&lt;&#x2F;p&gt;
+&lt;pre data-linenos data-lang=&quot;js&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-js &quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;1&lt;&#x2F;td&gt;&lt;td&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;fs &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;require&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;fs&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;&#x2F;td&gt;&lt;td&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;katex &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;require&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;katex&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;&#x2F;td&gt;&lt;td&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;jsdom &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;require&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;jsdom&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;&#x2F;td&gt;&lt;td&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;{ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;JSDOM &lt;&#x2F;span&gt;&lt;span&gt;} &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;jsdom&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;5&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;6&lt;&#x2F;td&gt;&lt;td&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; The first argument is the input html file, and the optional second argument is the output file
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;7&lt;&#x2F;td&gt;&lt;td&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;let &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;in_filename &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;process&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;argv&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;8&lt;&#x2F;td&gt;&lt;td&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;let &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;out_filename &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;process&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;argv&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;length &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;== &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;4 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;? &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;process&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;argv&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;3&lt;&#x2F;span&gt;&lt;span&gt;] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;in_filename&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;9&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;10&lt;&#x2F;td&gt;&lt;td&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; Pull the DOM from the HTML file
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;11&lt;&#x2F;td&gt;&lt;td&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;JSDOM.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;fromFile&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;in_filename&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;then&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;dom &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;12&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;*
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;13&lt;&#x2F;td&gt;&lt;td&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;     *  Select all divs with the math-display-block class
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;14&lt;&#x2F;td&gt;&lt;td&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;     *
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;15&lt;&#x2F;td&gt;&lt;td&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;     *  Using querySelectorAll instead of getElementsByClassName prevents infinite recursion 
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;16&lt;&#x2F;td&gt;&lt;td&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;     *  from occurring because the latter&amp;#39;s return value updates when the DOM is changed. 
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;17&lt;&#x2F;td&gt;&lt;td&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;     *  This creates a situation where KaTeX adds KaTeX elements which are then passed to KaTeX...
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;18&lt;&#x2F;td&gt;&lt;td&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;     *&#x2F;
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;19&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;let &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;equations &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;dom.window.document.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;querySelectorAll&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;div.math-display-block&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;20&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;21&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;let &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;i &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;i &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;&amp;lt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;equations&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;length&lt;&#x2F;span&gt;&lt;span&gt;; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;++&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;22&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; Get the text (KaTeX) of the div
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;23&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;let &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;equation &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;equations&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;i&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;24&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; Compile it to a string, rendering as a block if specified
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;25&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;let &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;html &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;katex.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;renderToString&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;equation&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;textContent&lt;&#x2F;span&gt;&lt;span&gt;, {
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;26&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;            throwOnError: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;true&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;27&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;            displayMode: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;equation.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;getAttribute&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;data-display&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;=== &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;display&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;28&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;        });
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;29&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; Write the HTML back into the div
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;30&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;equation&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;innerHTML &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;html
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;31&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;32&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; Serialize the updated dom and write back to the file
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;33&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;fs.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;writeFileSync&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;out_filename&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;dom.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;serialize&lt;&#x2F;span&gt;&lt;span&gt;());
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;34&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;});
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This code is available in full on &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matt-newcomer&#x2F;katex_injector&quot;&gt;GitHub&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>.org Domains</title>
+            <pubDate>Fri, 03 Feb 2023 00:00:00 +0000</pubDate>
+            <link>https://www.mattnewcomer.org/blog/2023-02-03-01/</link>
+            <guid>https://www.mattnewcomer.org/blog/2023-02-03-01/</guid>
+            <description>&lt;p&gt;One perennial question people ask me when they first visit this site is why does it have a .org top level domain? &lt;&#x2F;p&gt;
+&lt;p&gt;Choosing a TLD is a little more involved than just choosing cool looking words. Someone has to run the DNS servers to route requests to the server that this site is hosted on. Picking a TLD is like choosing a partner to handle some of your backend logistics. &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;thehackerblog.com&#x2F;the-io-error-taking-control-of-all-io-domains-with-a-targeted-registration&#x2F;&quot;&gt;.io domains&lt;&#x2F;a&gt; are somewhat infamous for poor uptime and registration services, but they’re super cheap. Internet forums have a horror story pop up every few weeks with bad domain registrars. There’s a balance to be had between registration price and service quality, and .org is &lt;em&gt;good enough&lt;&#x2F;em&gt; for me.&lt;&#x2F;p&gt;
+&lt;p&gt;That’s not to say .org &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;.org#History&quot;&gt;has been perfect&lt;&#x2F;a&gt;. &lt;&#x2F;p&gt;
+&lt;p&gt;.org was one of the &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;www.rfc-editor.org&#x2F;rfc&#x2F;rfc920.txt&quot;&gt;original TLDs registered in 1985&lt;&#x2F;a&gt;. As it pertains to the world wide web, .org is &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;www.rfc-editor.org&#x2F;rfc&#x2F;rfc1591.txt&quot;&gt;intended as the miscellaneous TLD&lt;&#x2F;a&gt; for organizations that don’t fit anywhere else. That’s me!&lt;&#x2F;p&gt;
+&lt;p&gt;Also, because I can. Why have some fancy .cloud or .tech when I can own a certified dad domain?&lt;&#x2F;p&gt;
+&lt;p&gt;I wonder how long I can hold onto this domain… I doubt there are VC firms eyeing it. &lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>Embedding for Fun</title>
+            <pubDate>Wed, 01 Feb 2023 00:00:00 +0000</pubDate>
+            <link>https://www.mattnewcomer.org/blog/2023-02-01-01/</link>
+            <guid>https://www.mattnewcomer.org/blog/2023-02-01-01/</guid>
+            <description>&lt;p&gt;In this week’s experiment, I added YouTube video support. Please forgive me for what have I done.&lt;&#x2F;p&gt;
+&lt;p&gt;Please enjoy this video that &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;djskytlz.com&#x2F;&quot;&gt;Jack&lt;&#x2F;a&gt; sent me.&lt;&#x2F;p&gt;
+&lt;div class=youtube&gt;
+    &lt;iframe
+        src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;oYLxkGz00d0?start=0&amp;end=92&quot;
+        webkitallowfullscreen
+        mozallowfullscreen
+        allowfullscreen&gt;
+    &lt;&#x2F;iframe&gt;
+&lt;&#x2F;div&gt;</description>
+        </item>
+        <item>
+            <title>.mp3’s are Incredible, and Streaming Services Suck</title>
+            <pubDate>Fri, 27 Jan 2023 00:00:00 +0000</pubDate>
+            <link>https://www.mattnewcomer.org/blog/2023-01-27-01/</link>
+            <guid>https://www.mattnewcomer.org/blog/2023-01-27-01/</guid>
+            <description>&lt;p&gt;One of my favorite things I own is my music collection. I’m not here to extoll the virtues of music, but I &lt;em&gt;&lt;strong&gt;am&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt; here to tell you why Spotify, Apple Music, and YouTube Music can all kick rocks. &lt;&#x2F;p&gt;
+&lt;h2 id=&quot;service-lock-in&quot;&gt;Service Lock-in&lt;&#x2F;h2&gt;
+&lt;p&gt;Over the past few years, I’ve jumped between Apple Music and Spotify to try out of their user interfaces. Switching between the two is a huge pain because you have to manually transfer songs or pay for a service to programmatically do it for you with decidedly ok results. If you don’t want to switch because of a social or operating system tie in, be prepared to weather price increases or hardware lockouts. &lt;&#x2F;p&gt;
+&lt;p&gt;Streaming isn’t anything special, either. Setting up your own streaming box isn’t more than an hour or two of work with a little bit of research. Why pay someone else in perpetuity to do it for you?&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;custom-tags-and-art&quot;&gt;Custom Tags and Art&lt;&#x2F;h2&gt;
+&lt;p&gt;Because I spend so much time organizing and listening to music I’ve collected, I like to organize and tag it. If Spotify says an album is “Rock” but I think it’s “Classic Rock,” it shouldn’t be that hard to change a string somewhere. Why should a service I pay for restrict my organizational urges?&lt;&#x2F;p&gt;
+&lt;p&gt;Sometimes I don’t like the ultra deluxe versions of albums with the 17th alternate take of a song, so I just stash extra files and retag the rest to make the original release. Sergeant Pepper’s album cover looks too saturated? Just download a different copy. Freedom over the medium should be the default.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;proper-ownership&quot;&gt;Proper Ownership&lt;&#x2F;h2&gt;
+&lt;p&gt;One thing that drove me crazy was Spotify just &lt;em&gt;removing&lt;&#x2F;em&gt; albums I liked inexplicably. I understand the licensing agreements exist, but it really sucks just having music disappear. If I pay someone monthly for something, I think it’s reasonable for it to be there month after month. Unless someone waltzes into my hard disk array and deletes things, it should be there in perpetuity. A win for preserving the arts how I’d like to.&lt;&#x2F;p&gt;
+&lt;p&gt;I feel like there’s a lesson here about ownership in the modern age, and why it’s a right that should be vehemently defended against corporate incursions.&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>Social Commentary</title>
+            <pubDate>Tue, 24 Jan 2023 00:00:00 +0000</pubDate>
+            <link>https://www.mattnewcomer.org/blog/2023-01-24-01/</link>
+            <guid>https://www.mattnewcomer.org/blog/2023-01-24-01/</guid>
+            <description>&lt;p&gt;&lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;dictionary.cambridge.org&#x2F;dictionary&#x2F;english&#x2F;dystopia&quot;&gt;dystopia&lt;&#x2F;a&gt; (n.)&lt;&#x2F;p&gt;
+&lt;p&gt;a very bad or unfair society in which there is a lot of suffering, especially an imaginary society in the future, after something terrible has happened; a description of such a society.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;&lt;em&gt;The following questions are best pondered alone and with a clear head:&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Is society unfair? Why is society bad or unfair? How did it get this way?&lt;&#x2F;p&gt;
+&lt;p&gt;Where is the suffering? Who experiences it? Why does it exist?&lt;&#x2F;p&gt;
+&lt;p&gt;In the set of all possible futures, how many are worse than now? How did they get there?&lt;&#x2F;p&gt;
+&lt;p&gt;What was the terrible event that began the chain reaction? How did the reaction run away uncontrolled?&lt;&#x2F;p&gt;
+&lt;p&gt;What did&#x2F;do&#x2F;will I do to fuel or inhibit these changes? Am I an idle observer?&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;Did you experience your head effortlessly substituting in certain words and phrases? Maybe we didn’t use the same words, but I think you get the point.&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>Sony MDR-7506</title>
+            <pubDate>Thu, 19 Jan 2023 00:00:00 +0000</pubDate>
+            <link>https://www.mattnewcomer.org/blog/2023-01-19-01/</link>
+            <guid>https://www.mattnewcomer.org/blog/2023-01-19-01/</guid>
+            <description>&lt;p&gt;I had a lot of fun writing about my &lt;a href=&quot;https:&#x2F;&#x2F;www.mattnewcomer.org&#x2F;blog&#x2F;2023-01-17-01&#x2F;&quot;&gt;Grado’s&lt;&#x2F;a&gt;, so I figured my Sony’s were up next. &lt;&#x2F;p&gt;
+&lt;figure &gt;
+&lt;a href=7506_right_close_full.JPG&gt;
+&lt;img src=&quot;7506_right_close_mini.JPG&quot;
+    alt=&quot;A pair of Sony MDR-7506 headphones sitting on a stand&quot;
+    width=&quot;800&quot;
+    
+    &#x2F;&gt;
+&lt;&#x2F;a&gt;
+&lt;figcaption&gt;My pair of MDR-7506 headphones&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;The Sony MDR-7506 headphones entered the scene in 1991 and are primarily billed as studio monitors, which are designed for use while creating and mixing music. I don’t really have a any music-making ability, but I really like listening. The Grado’s are fun, but there had to be more to experience. Why not try an industry veteran?&lt;&#x2F;p&gt;
+&lt;figure &gt;
+&lt;a href=7506_headband_full.JPG&gt;
+&lt;img src=&quot;7506_headband_mini.JPG&quot;
+    alt=&quot;A pair of Sony MDR-7506 headphones with the headband focused reading studio monitor&quot;
+    width=&quot;800&quot;
+    
+    &#x2F;&gt;
+&lt;&#x2F;a&gt;
+&lt;figcaption&gt;Sony wants you to know one thing immediately&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;&lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;www.rtings.com&#x2F;headphones&#x2F;reviews&#x2F;sony&#x2F;mdr-7506&quot;&gt;rtings&lt;&#x2F;a&gt; describes these headphones as “[good] for neutral listening…[they] have a well-balanced sound with a punchy bass that doesn’t drown the excellent mid-range.” I couldn’t agree with that summary more. Be sure to check them out for a more &lt;em&gt;scientific&lt;&#x2F;em&gt; analysis.&lt;&#x2F;p&gt;
+&lt;p&gt;A few key characteristics to note:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Unlike the Grado’s that highlight a few instruments, the Sony’s just keep the bass in without muddying everything else.&lt;&#x2F;li&gt;
+&lt;li&gt;Otherwise, the headphones just sound “flat”, as if you were standing in an anechoic chamber with the speaker pointed at you.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;It’s hard to really describe what these sound like; maybe some examples with elucidate my points:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Daft Punk’s “Voyager” is dominated by a bassline that the Sony’s deliver without distorting the synth or electronic drums.&lt;&#x2F;li&gt;
+&lt;li&gt;The Who’s “Eminence Front” features a guitar with some reverb, but unlike with open-back headphones, there is no extra noise beyond what is in the recording.&lt;&#x2F;li&gt;
+&lt;li&gt;Frank Ocean’s “Pink + White” has a bass note, a violin-esque sound, and vocals layered simultaneously around the halfway mark. All three are perfectly clear and well balanced.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Many of these changes are primarily driven by these headphones being closed-back. They inherently retain more bass, but without sounding boom-y. Pretty incredible for a pair of headphones with a party trick just waiting.&lt;&#x2F;p&gt;
+&lt;figure &gt;
+&lt;a href=7506_folded_full.JPG&gt;
+&lt;img src=&quot;7506_folded_mini.JPG&quot;
+    alt=&quot;A pair of Sony MDR-7506 headphones folded sitting on a table&quot;
+    width=&quot;800&quot;
+    
+    &#x2F;&gt;
+&lt;&#x2F;a&gt;
+&lt;figcaption&gt;The hinges allow the ear cups to fold inside the headband&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;Because they’re closed-back, you can use them in public without other people hearing the “bad music” you’re listening to. Sony &lt;em&gt;&lt;strong&gt;knew&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt; this and they fold to fit in a bag. They’re just too much fun to leave at home. They only take ~60Ω to drive, so mobile devices can do it with relative ease.&lt;&#x2F;p&gt;
+&lt;p&gt;The plastic build with metal hinges is lightweight and exudes utility. The thinner earpads make your ears warm while allowing for the folding action. No fancy materials or artwork, just plastic and some labels. That said, they excel at more than music reproduction; they are super forgiving, too. The long coiled cable lets you walk around if using a stationary device to power them. The headband clicks into position for a consistent fit. No wonder these have stuck around for 30+ years. &lt;&#x2F;p&gt;
+&lt;figure &gt;
+&lt;a href=7506_cord_view_full.JPG&gt;
+&lt;img src=&quot;7506_cord_view_mini.JPG&quot;
+    alt=&quot;A pair of Sony MDR-7506 headphones sitting on a table with the coiled cable in the foreground&quot;
+    width=&quot;800&quot;
+    
+    &#x2F;&gt;
+&lt;&#x2F;a&gt;
+&lt;figcaption&gt;The coiled cable is heavy and will pull on your head&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;Come to think of it, these are almost a perfect foil to the Grado’s. It’s amazing how different the same song can sound through two different pairs of headphones.&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>Grado SR80x</title>
+            <pubDate>Tue, 17 Jan 2023 00:00:00 +0000</pubDate>
+            <link>https://www.mattnewcomer.org/blog/2023-01-17-01/</link>
+            <guid>https://www.mattnewcomer.org/blog/2023-01-17-01/</guid>
+            <description>&lt;p&gt;I wanted to take a moment to post my opinions on my Grado SR80x headphones. Over the past few months I’ve gotten into higher-end audio equipment in the hopes of enhancing my music listening experience.&lt;&#x2F;p&gt;
+&lt;p&gt;I decided to jump in with a pair of Grado SR80x headphones and they’ve been phenomenal. Don’t let their design or price fool you, these guys pack a punch.&lt;&#x2F;p&gt;
+&lt;figure &gt;
+&lt;a href=SR80x_front_full.JPG&gt;
+&lt;img src=&quot;SR80x_front_mini.JPG&quot;
+    alt=&quot;A pair of Grado SR80x headphones sitting flat on a dark table&quot;
+    width=&quot;800&quot;
+    
+    &#x2F;&gt;
+&lt;&#x2F;a&gt;
+&lt;figcaption&gt;My pair of SR80x headphones&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;Many people in audio forums will tell you that Grado headphones have a lot of high end and are very revealing… and they’re right. They’re also a ton of fun. I could sit here and list specifications and use cases at you, but &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;www.rtings.com&#x2F;headphones&#x2F;reviews&#x2F;grado&#x2F;sr80e-sr80&quot;&gt;rtings&lt;&#x2F;a&gt; can do that better than I can.&lt;&#x2F;p&gt;
+&lt;p&gt;For the price, they deliver a surprisingly neutral sound except for the high end. Prepare for cymbals and trumpets to be piercing, almost to the point of pain. &lt;&#x2F;p&gt;
+&lt;p&gt;Don’t mistake that anecdote for a dislike; it’s a new way of hearing your music. If every headphone was perfectly flat and neutral then there would be no variety and I would be sad. The SR80x has a little bit of everything, and some strong opinions to boot.&lt;&#x2F;p&gt;
+&lt;figure &gt;
+&lt;a href=SR80x_left_close_full.JPG&gt;
+&lt;img src=&quot;SR80x_left_close_mini.JPG&quot;
+    alt=&quot;The left speaker &quot;
+    width=&quot;800&quot;
+    
+    &#x2F;&gt;
+&lt;&#x2F;a&gt;
+&lt;figcaption&gt;The outside casings kind of look like tires if you squint&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;Jazz music sounds phenomenal &lt;em&gt;because&lt;&#x2F;em&gt; it leans into the instruments that dominate the genre. Rock music sounds muddy and shallow because the bass is nowhere to be found. That’s to say that they fit certain genres of music very well, others not so much.&lt;&#x2F;p&gt;
+&lt;p&gt;Wearing them is nice because they weigh nothing and just float on your head when bent properly. Yes, I said bent. The padded headband encompasses a spring steel sheet that you bend to fit the shape of your head. When properly fitted, the speakers gently rest on your ears.&lt;&#x2F;p&gt;
+&lt;figure &gt;
+&lt;a href=SR80x_exposed_speaker_full.JPG&gt;
+&lt;img src=&quot;SR80x_exposed_speaker_mini.JPG&quot;
+    alt=&quot;A pair of Grado SR80x headphones with the left ear pad removed&quot;
+    width=&quot;800&quot;
+    
+    &#x2F;&gt;
+&lt;&#x2F;a&gt;
+&lt;figcaption&gt;The design is... different&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;Other buyers have complained of the headphones being built cheaply, but I really like the design. They feel extremely utilitarian and purpose built for sitting down and enjoying music. They’re not super comfortable, and that’s not for everyone, but then again the whole package just works for me.&lt;&#x2F;p&gt;
+&lt;p&gt;When you remove the ear pads you can shine a light through the headphones, they’re that open. The openness of the speaker back makes the sound stage feel wide and immersive. They also take almost no power to drive; even my little brick phone can do it without a sweat. &lt;&#x2F;p&gt;
+&lt;p&gt;As a music enjoyment device, these headphones are truly something special that has to be experienced.&lt;&#x2F;p&gt;
+&lt;p&gt;The final thing to note is that Grado Labs, the makers of these headphones, are super cool. They’re based in Brooklyn, New York and have been family run for 50+ years. They’re hand built in New York which is something special in the age of globalization. They arrive in a minimalist box with shaped foam to keep them safe in transit. No frills. The box has a thank you note and the headphones themselves.&lt;&#x2F;p&gt;
+&lt;p&gt;The best part is they don’t advertize. Fans (like me) do that for them because they’re just that unique. I didn’t really know what I was getting into with these headphones, but they’re so much fun that it just pulled me deeper into the hobby. &lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>Scraping Together a Blacksburg Transit Route Map</title>
+            <pubDate>Sat, 14 Jan 2023 00:00:00 +0000</pubDate>
+            <link>https://www.mattnewcomer.org/blog/2023-01-14-01/</link>
+            <guid>https://www.mattnewcomer.org/blog/2023-01-14-01/</guid>
+            <description>&lt;p&gt;The Blacksburg Transit bus system is pretty cool, but it doesn’t produce a map that has all routes on it simultaneously. Why not try to scrape one together?&lt;&#x2F;p&gt;
+&lt;p&gt;Step one was to determine how data is displayed on the website. The &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;ridebt.org&quot;&gt;BT Website&lt;&#x2F;a&gt; displays a live map of all routes and buses in operation.&lt;&#x2F;p&gt;
+&lt;p&gt;Opening up the network inspector and reloading the page yielded this stream of requests:&lt;&#x2F;p&gt;
+&lt;figure &gt;
+
+&lt;img src=&quot;bus_network_traffic.png&quot;
+    alt=&quot;A table displaying a series of network requests to ridebt.org for data&quot;
+    width=&quot;800&quot;
+    
+    &#x2F;&gt;
+
+&lt;figcaption&gt;Roughly ten seconds worth of bus update data&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;Opening up the first request yielded a JSON object, with an entry for each bus currently in service with route data. Expanding the &lt;code&gt;states&lt;&#x2F;code&gt; field showed information about the bus’ location, speed, heading, and if it’s at a stop.&lt;&#x2F;p&gt;
+&lt;figure &gt;
+
+&lt;img src=&quot;TOM_route_data.png&quot;
+    alt=&quot;A table displaying a series of fields with information about the bus in service&quot;
+    width=&quot;400&quot;
+    
+    &#x2F;&gt;
+
+
+&lt;&#x2F;figure&gt;&lt;figure &gt;
+
+&lt;img src=&quot;TOM_route_states.png&quot;
+    alt=&quot;A table displaying a series of fields with information about the physical state of the bus&quot;
+    width=&quot;400&quot;
+    
+    &#x2F;&gt;
+
+
+&lt;&#x2F;figure&gt;
+&lt;p&gt;Cool, so this provides the locations of the buses, but the map also renders the routes on the map. How does it do that? I clicked on a new bus and spotted a different URL being passed back to the website.&lt;&#x2F;p&gt;
+&lt;figure &gt;
+
+&lt;img src=&quot;MSN_route_points.png&quot;
+    alt=&quot;A table displaying a series of fields with information about the route selected&quot;
+    width=&quot;800&quot;
+    
+    &#x2F;&gt;
+
+
+&lt;&#x2F;figure&gt;
+&lt;p&gt;It seems that selecting the route (which loads all of the lines on the map) makes a call to &lt;code&gt;getPatternPoints&lt;&#x2F;code&gt;, which accepts a route name. The response is a list of every point that makes up the route, and if it is a stop or just a waypoint.&lt;&#x2F;p&gt;
+&lt;figure &gt;
+
+&lt;img src=&quot;MSN_route_data.png&quot;
+    alt=&quot;A table displaying a series of fields with information about the bus in service&quot;
+    width=&quot;400&quot;
+    
+    &#x2F;&gt;
+
+
+&lt;&#x2F;figure&gt;
+&lt;p&gt;I decided to try and chain together the list of active routes, then for each route, query the set of points then plot them all on the same map. I started by querying the &lt;code&gt;patternName&lt;&#x2F;code&gt; of each route:&lt;&#x2F;p&gt;
+&lt;pre data-linenos data-lang=&quot;python&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;1&lt;&#x2F;td&gt;&lt;td&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;requests, json
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;buses_response &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;requests.get(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;https:&#x2F;&#x2F;ridebt.org&#x2F;index.php?option=com_ajax&amp;amp;module=bt_map&amp;amp;format=json&amp;amp;method=getBuses&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;)
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;&#x2F;td&gt;&lt;td&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;assert&lt;&#x2F;span&gt;&lt;span&gt;(buses_response.status_code &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;== &lt;&#x2F;span&gt;&lt;span&gt;requests.codes.ok)
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;5&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;6&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;routes &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;json.loads(buses_response.text)
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;7&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;pattern_names &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;[]
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;8&lt;&#x2F;td&gt;&lt;td&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;route &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;routes[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;data&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;]:
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;9&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;print&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;(route[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;patternName&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;])
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre style=&quot;background-color:#282828;color:#fdf4c1aa;&quot;&gt;&lt;code&gt;&lt;span&gt;Toms Creek - Progress
+&lt;&#x2F;span&gt;&lt;span&gt;HWD-HDG
+&lt;&#x2F;span&gt;&lt;span&gt;Two Town Trolley - Inbound Hospital
+&lt;&#x2F;span&gt;&lt;span&gt;Main Street South - Ellett
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Given the pattern, pass it to &lt;code&gt;getPatternPoints&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre data-linenos data-lang=&quot;python&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;6&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;routes &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;json.loads(buses_response.text)
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;7&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;pattern_names &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;[]
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;8&lt;&#x2F;td&gt;&lt;td&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;route &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;routes[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;data&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;]:
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;9&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;pattern_names.append(route[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;patternName&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;])
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;10&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;11&lt;&#x2F;td&gt;&lt;td&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;pattern_name &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;pattern_names:
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;12&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;    points_response &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;requests.get(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;https:&#x2F;&#x2F;ridebt.org&#x2F;index.php?option=com_ajax&amp;amp;module=bt_map&amp;amp;format=json&amp;amp;method=getPatternPoints&amp;amp;patternName=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;pattern_name)
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;13&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;assert&lt;&#x2F;span&gt;&lt;span&gt;(points_response.status_code &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;== &lt;&#x2F;span&gt;&lt;span&gt;requests.codes.ok)
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;14&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;15&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;    pattern_waypoints &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;json.loads(points_response.text)
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;16&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;waypoint &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;pattern_waypoints[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;data&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;]:
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;17&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;print&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;(waypoint)
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre style=&quot;background-color:#282828;color:#fdf4c1aa;&quot;&gt;&lt;code&gt;&lt;span&gt;966 rows...
+&lt;&#x2F;span&gt;&lt;span&gt;{&amp;#39;routeShortName&amp;#39;: &amp;#39;161&amp;#39;, &amp;#39;patternPointName&amp;#39;: &amp;#39;Alumni Mall Wbnd&amp;#39;, &amp;#39;isBusStop&amp;#39;: &amp;#39;Y&amp;#39;, &amp;#39;isTimePoint&amp;#39;: &amp;#39;N&amp;#39;, &amp;#39;stopCode&amp;#39;: &amp;#39;1112&amp;#39;, &amp;#39;latitude&amp;#39;: &amp;#39;37.23134&amp;#39;, &amp;#39;longitude&amp;#39;: &amp;#39;-80.4166&amp;#39;}
+&lt;&#x2F;span&gt;&lt;span&gt;{&amp;#39;routeShortName&amp;#39;: &amp;#39;162&amp;#39;, &amp;#39;patternPointName&amp;#39;: &amp;#39;Way Point&amp;#39;, &amp;#39;isBusStop&amp;#39;: &amp;#39;N&amp;#39;, &amp;#39;isTimePoint&amp;#39;: &amp;#39;N&amp;#39;, &amp;#39;stopCode&amp;#39;: &amp;#39;&amp;#39;, &amp;#39;latitude&amp;#39;: &amp;#39;37.2312&amp;#39;, &amp;#39;longitude&amp;#39;: &amp;#39;-80.4168&amp;#39;}
+&lt;&#x2F;span&gt;&lt;span&gt;{&amp;#39;routeShortName&amp;#39;: &amp;#39;163&amp;#39;, &amp;#39;patternPointName&amp;#39;: &amp;#39;Way Point&amp;#39;, &amp;#39;isBusStop&amp;#39;: &amp;#39;N&amp;#39;, &amp;#39;isTimePoint&amp;#39;: &amp;#39;N&amp;#39;, &amp;#39;stopCode&amp;#39;: &amp;#39;&amp;#39;, &amp;#39;latitude&amp;#39;: &amp;#39;37.23094&amp;#39;, &amp;#39;longitude&amp;#39;: &amp;#39;-80.4172&amp;#39;}
+&lt;&#x2F;span&gt;&lt;span&gt;{&amp;#39;routeShortName&amp;#39;: &amp;#39;164&amp;#39;, &amp;#39;patternPointName&amp;#39;: &amp;#39;Way Point&amp;#39;, &amp;#39;isBusStop&amp;#39;: &amp;#39;N&amp;#39;, &amp;#39;isTimePoint&amp;#39;: &amp;#39;N&amp;#39;, &amp;#39;stopCode&amp;#39;: &amp;#39;&amp;#39;, &amp;#39;latitude&amp;#39;: &amp;#39;37.23056&amp;#39;, &amp;#39;longitude&amp;#39;: &amp;#39;-80.4178&amp;#39;}
+&lt;&#x2F;span&gt;&lt;span&gt;{&amp;#39;routeShortName&amp;#39;: &amp;#39;165&amp;#39;, &amp;#39;patternPointName&amp;#39;: &amp;#39;Squires Wbnd&amp;#39;, &amp;#39;isBusStop&amp;#39;: &amp;#39;Y&amp;#39;, &amp;#39;isTimePoint&amp;#39;: &amp;#39;Y&amp;#39;, &amp;#39;stopCode&amp;#39;: &amp;#39;1113&amp;#39;, &amp;#39;latitude&amp;#39;: &amp;#39;37.22977&amp;#39;, &amp;#39;longitude&amp;#39;: &amp;#39;-80.4191&amp;#39;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;So that’s all of the data… in an unusable format; let me organize it using dictionaries. These dictionaries can be used later to attach route metadata.&lt;&#x2F;p&gt;
+&lt;pre data-linenos data-lang=&quot;python&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;1&lt;&#x2F;td&gt;&lt;td&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;requests, json
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;&#x2F;td&gt;&lt;td&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;matplotlib.pyplot &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;plt
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;buses_response &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;requests.get(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;https:&#x2F;&#x2F;ridebt.org&#x2F;index.php?option=com_ajax&amp;amp;module=bt_map&amp;amp;format=json&amp;amp;method=getBuses&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;)
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;5&lt;&#x2F;td&gt;&lt;td&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;assert&lt;&#x2F;span&gt;&lt;span&gt;(buses_response.status_code &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;== &lt;&#x2F;span&gt;&lt;span&gt;requests.codes.ok)
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;6&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;7&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;buses &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;json.loads(buses_response.text)
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;8&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;route_data &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;{}
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;9&lt;&#x2F;td&gt;&lt;td&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;bus &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;buses[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;data&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;]:
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;10&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;    route_data[bus[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;patternName&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;]] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;{}
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;11&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;12&lt;&#x2F;td&gt;&lt;td&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;pattern_name &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;route_data:
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;13&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;    points_response &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;requests.get(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;https:&#x2F;&#x2F;ridebt.org&#x2F;index.php?option=com_ajax&amp;amp;module=bt_map&amp;amp;format=json&amp;amp;method=getPatternPoints&amp;amp;patternName=&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;pattern_name)
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;14&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;assert&lt;&#x2F;span&gt;&lt;span&gt;(points_response.status_code &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;== &lt;&#x2F;span&gt;&lt;span&gt;requests.codes.ok)
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;15&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;16&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;    pattern_waypoints &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;json.loads(points_response.text)
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;17&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;    route_data[pattern_name][&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;waypoints&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;[]
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;18&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;waypoint &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;pattern_waypoints[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;data&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;]:
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;19&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;        route_data[pattern_name][&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;waypoints&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;.append((&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;float&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;(waypoint[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;longitude&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;]),&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;float&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;(waypoint[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;latitude&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;])))
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;20&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;21&lt;&#x2F;td&gt;&lt;td&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;pattern_name &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;route_data:
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;22&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;# zip(*&amp;lt;iterable&amp;gt;) acts as an unzip; transforms tuples into lists
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;23&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;# https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;19339&#x2F;transpose-unzip-function-inverse-of-zip
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;24&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;# The outer asterisk unpacks the zip object so that two lists are passed
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;25&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;plt.plot(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;*&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;zip&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;*&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;route_data[pattern_name][&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;waypoints&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;]))
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;26&lt;&#x2F;td&gt;&lt;td&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;plt.show()
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;code&gt;route_data&lt;&#x2F;code&gt; has a pattern-named key that contains a list of &lt;code&gt;(longitude, latitude)&lt;&#x2F;code&gt; tuples.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#282828;color:#fdf4c1aa;&quot;&gt;&lt;code&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;#39;Toms Creek - Progress&amp;#39;: 
+&lt;&#x2F;span&gt;&lt;span&gt;        {&amp;#39;waypoints&amp;#39;: [(-80.4208, 37.22967), (-80.4209, 37.22971), ...]},
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;#39;HWD-HDG&amp;#39;: 
+&lt;&#x2F;span&gt;&lt;span&gt;        {&amp;#39;waypoints&amp;#39;: [(-80.4191, 37.22977), (-80.4203, (37.22906), ...]},
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;#39;Two Town Trolley - Inbound Hospital&amp;#39;: 
+&lt;&#x2F;span&gt;&lt;span&gt;        {&amp;#39;waypoints&amp;#39;: [(-80.4186, 37.2298), (-80.4172, 37.23071), ...]},
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;#39;Main Street South - Ellett&amp;#39;: 
+&lt;&#x2F;span&gt;&lt;span&gt;        {&amp;#39;waypoints&amp;#39;: [(-80.4191, 37.22977), (-80.4193, 37.22964), ...]}
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;When executed, the code outputs the following image: &lt;&#x2F;p&gt;
+&lt;figure &gt;
+
+&lt;img src=&quot;all_routes.png&quot;
+    alt=&quot;A map showing the TTT, TOM, HDG, and MSN routes of the Blacksburg Transit network&quot;
+    width=&quot;400&quot;
+    
+    &#x2F;&gt;
+
+
+&lt;&#x2F;figure&gt;
+&lt;p&gt;As I write this, it’s a Saturday so fewer routes are in operation. When the spring semester begins I’ll run it again to see the network’s coverage of town. I think a little bit of network scraping went a long way.&lt;&#x2F;p&gt;
+&lt;p&gt;Areas for improvement:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;I think I’d like to add a way to color the routes the same as the website, but I couldn’t find a programmatic way beyond hard coding. Same can be said for a label.&lt;&#x2F;li&gt;
+&lt;li&gt;The aspect ratio of the map isn’t set.&lt;&#x2F;li&gt;
+&lt;li&gt;If a bus switches routes (e.g. HDG&#x2F;HWD), this map is only able of displaying the route currently being driven. See &lt;a href=&quot;.&#x2F;all_routes_alt.png&quot;&gt;this&lt;&#x2F;a&gt; image for an example. If the program was left running, there might be a way to layer every route driven.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+        </item>
+        <item>
+            <title>Stormy Days</title>
+            <pubDate>Thu, 12 Jan 2023 00:00:00 +0000</pubDate>
+            <link>https://www.mattnewcomer.org/blog/2023-01-12-01/</link>
+            <guid>https://www.mattnewcomer.org/blog/2023-01-12-01/</guid>
+            <description>&lt;p&gt;Life changes quickly, yet somehow it moves even faster.&lt;&#x2F;p&gt;
+&lt;p&gt;Packed schedules, to-do lists, and obligations keep the accelerator pinned to the floor.&lt;&#x2F;p&gt;
+&lt;p&gt;Nuanced opinions, complicated feelings, and distant aspirations cloud your mind.&lt;&#x2F;p&gt;
+&lt;p&gt;The world around just keeps moving.&lt;&#x2F;p&gt;
+&lt;p&gt;Why not stop, even if only for a moment?&lt;&#x2F;p&gt;
+&lt;p&gt;The rain rhythmically drips down the window and flows down the gutter. &lt;&#x2F;p&gt;
+&lt;p&gt;The dark skies occlude the brighter days ahead.&lt;&#x2F;p&gt;
+&lt;p&gt;Let the change of weather envelop you; be with yourself apart from the world that surrounds you.&lt;&#x2F;p&gt;
+&lt;p&gt;The lightning reminds you of the rushes left to experiences, thunder shakes you at your core.&lt;&#x2F;p&gt;
+&lt;p&gt;Wake up in the morning, pick up the fallen branches, and move on.&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>My First Attempt at Photography</title>
+            <pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate>
+            <link>https://www.mattnewcomer.org/blog/2023-01-07-01/</link>
+            <guid>https://www.mattnewcomer.org/blog/2023-01-07-01/</guid>
+            <description>&lt;p&gt;Over the holidays I received a Canon SL3 DSLR camera to toy around with. I don’t have aspirations of starting a photography Instagram feed or anything, I just wanted to be able to preserve things I see around campus and town.&lt;&#x2F;p&gt;
+&lt;p&gt;Last week I decided to take a few minutes to try using it for the first time around campus. Here’s what I got:&lt;&#x2F;p&gt;
+&lt;figure &gt;
+&lt;a href=.&amp;#x2F;theatre101_full.jpg&gt;
+&lt;img src=&quot;theatre101_mini.jpg&quot;
+    alt=&quot;The front of Virginia Tech&amp;#x27;s Theatre 101 on a sunny afternoon.&quot;
+    width=&quot;800&quot;
+    
+    &#x2F;&gt;
+&lt;&#x2F;a&gt;
+&lt;figcaption&gt;Virginia Tech&amp;#x27;s Theatre 101 on College Avenue&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;&lt;figure &gt;
+&lt;a href=.&amp;#x2F;otey_street_full.jpg&gt;
+&lt;img src=&quot;otey_street_mini.jpg&quot;
+    alt=&quot;A long shot of a empty two lane road flanked by Virginia Tech facilities&quot;
+    width=&quot;800&quot;
+    
+    &#x2F;&gt;
+&lt;&#x2F;a&gt;
+&lt;figcaption&gt;An abnormally empty Otey Street&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;&lt;figure &gt;
+&lt;a href=.&amp;#x2F;newman_library_full.jpg&gt;
+&lt;img src=&quot;newman_library_mini.jpg&quot;
+    alt=&quot;The rounded face of Virginia Tech&amp;#x27;s Newman Libary in the afternoon sunlight&quot;
+    width=&quot;800&quot;
+    
+    &#x2F;&gt;
+&lt;&#x2F;a&gt;
+&lt;figcaption&gt;Newman Library coming from College Avenue&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;&lt;figure &gt;
+&lt;a href=.&amp;#x2F;burruss_hall_full.jpg&gt;
+&lt;img src=&quot;burruss_hall_mini.jpg&quot;
+    alt=&quot;The top of Burruss Hall with a windless American Flag in the foreground&quot;
+    width=&quot;800&quot;
+    
+    &#x2F;&gt;
+&lt;&#x2F;a&gt;
+&lt;figcaption&gt;Burruss Hall against a lightening sky&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;&lt;figure &gt;
+&lt;a href=.&amp;#x2F;sign_full.jpg&gt;
+&lt;img src=&quot;sign_mini.jpg&quot;
+    alt=&quot;A sign that reads Notice: Skating or Skateboarding on these decks in PRO and angerSus&quot;
+    width=&quot;800&quot;
+    
+    &#x2F;&gt;
+&lt;&#x2F;a&gt;
+&lt;figcaption&gt;A carefully graffitied sign affixed to Derring Hall&amp;#x27;s upper deck&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;&lt;figure &gt;
+&lt;a href=.&amp;#x2F;derring_hall_full.jpg&gt;
+&lt;img src=&quot;derring_hall_mini.jpg&quot;
+    alt=&quot;View from Derring Hall&amp;#x27;s upper deck towards Whittemore hall with Hitt Hall construction&quot;
+    width=&quot;800&quot;
+    
+    &#x2F;&gt;
+&lt;&#x2F;a&gt;
+&lt;figcaption&gt;The corridor from Derring Hall to Whittemore Hall with Hitt Hall construction in the foreground&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;I think all of these photos look &lt;em&gt;off&lt;&#x2F;em&gt; because on a campus of 30,000 there was maybe 10 people I saw the whole time. That, or I have accidentally mastered taking pictures that sit squarely at the bottom of the uncanny valley. 🤷&lt;&#x2F;p&gt;
+&lt;p&gt;I decided to shoot in aperture drive mode and oh boy did I overestimate how small my aperture needed to be. Most of these photos have fast shutter speeds (1&#x2F;500 or less) to compensate for my mistake. The more you know!&lt;&#x2F;p&gt;
+&lt;p&gt;I shot my photos in Canon’s RAW format (CRAW3) and tried to edit them for sharpness while keeping them true to what I saw. Click on any photo for the full resolution jpeg&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>Eating Only Potatoes for a Week</title>
+            <pubDate>Tue, 03 Jan 2023 00:00:00 +0000</pubDate>
+            <link>https://www.mattnewcomer.org/blog/2023-01-03-01/</link>
+            <guid>https://www.mattnewcomer.org/blog/2023-01-03-01/</guid>
+            <description>&lt;p&gt;Yeah, I was that guy. I wanted to rock the boat a little to see what it did to me, so I decided to take a week to try the potato diet.&lt;&#x2F;p&gt;
+&lt;p&gt;I originally learned about the diet from &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;slimemoldtimemold.com&#x2F;2022&#x2F;04&#x2F;29&#x2F;potato-diet-community-trial-sign-up-now-lol&#x2F;&quot;&gt;Slime Mold Time Mold&lt;&#x2F;a&gt;’s community trial. Just the prospect of eating one food exclusively was utterly fascinating; well that and I wanted to see what it would do to me. I’ve read about how food impacts your mental state in the past, but I never really noticed that change in myself. Maybe I’ve always eaten a “western” diet, maybe it’s a blind spot I have. Regardless, why not see what happens?&lt;&#x2F;p&gt;
+&lt;p&gt;The ground rules are super simple:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Eat potatoes&lt;&#x2F;li&gt;
+&lt;li&gt;Eat as many potatoes as you want, but stop when you’re full&lt;&#x2F;li&gt;
+&lt;li&gt;Try not to season them, but if you do, avoid dairy and keep the salt down&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h2 id=&quot;the-experience&quot;&gt;The Experience&lt;&#x2F;h2&gt;
+&lt;p&gt;The feeling of going to the store solely to buy potatoes is weird. To run my little experiment I got a 10lb bag of Russet, a 5lb bag of yellow, and a 1lb bag of mini red potatoes. I opted to bake the Russets and roast the yellows and mini reds because that’s how I’ve always prepared each type and just went with it.&lt;&#x2F;p&gt;
+&lt;p&gt;Because you are only making potatoes, it’s easy to prep them in bulk. I just fired up the oven once and made roughly four days of food in roughly an hour. I did have to use every bowl I own to store all of the food I made… whoops. &lt;&#x2F;p&gt;
+&lt;p&gt;For each of the seven days, I typically ate a late morning and early evening meal. The most I ate was on the last day when I had four Russets in one sitting for dinner. If you decide to do this yourself, you’ll quickly notice just how hard it is to eat potatoes quickly. Even when I tried, it took me five minutes or more to finish a single potato. The speed and the volume that the potatoes take up in your stomach seems to have made a situation where I couldn’t overeat. I guess the second rule above is self-enforcing.&lt;&#x2F;p&gt;
+&lt;p&gt;As for the food, it’s like eating solid air. Potatoes are dense and utterly tasteless without garnishes or seasoning. After the first day, I slowly stopped caring. Instead of living to eat, my mindset shifted to one of eating to live. Potatoes are pretty much all carbs, and I experiences some weird after-meal energy spikes and crashes. This was the single hardest thing to overcome with respect to the diet. They became more pronounced as the week went on, but once I resumed a normal diet they went away. I suspect that a lack of protein was the root cause.&lt;&#x2F;p&gt;
+&lt;p&gt;The second hardest thing about the diet was the social aspect. When my friends invited me out to lunch or some event had food, I just had to wait for potato time. I did slowly perfect the art of gently saying no without launching into a full story (which you’re reading now). &lt;&#x2F;p&gt;
+&lt;h2 id=&quot;takeaways&quot;&gt;Takeaways&lt;&#x2F;h2&gt;
+&lt;p&gt;Dear reader, I’d like to impress upon you how uneventful adhering to this diet is. You buy the potatoes, wash the potatoes, potentially cut the potatoes, you bake&#x2F;roast&#x2F;boil the potatoes, you enjoy the potatoes. Repeat weekly.&lt;&#x2F;p&gt;
+&lt;p&gt;I genuinely had a good time just eating spuds. So much so that I want to do it again, but with two changes so it’s maintainable in the long term:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;I can eat a small piece of meat&#x2F;can of beans every few days
+&lt;ul&gt;
+&lt;li&gt;Fixes the hardest issue&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;I can skip one meal per week to eat with friends
+&lt;ul&gt;
+&lt;li&gt;Fixes the second hardest issue&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;I think my little experiment was a success; so much so that I want to do it  for a few months. Let’s see how that goes.&lt;&#x2F;p&gt;
+&lt;p&gt;Thank you, humble spud.&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>Baking for Fun &amp; Profit</title>
+            <pubDate>Thu, 15 Dec 2022 00:00:00 +0000</pubDate>
+            <link>https://www.mattnewcomer.org/blog/2022-12-15-01/</link>
+            <guid>https://www.mattnewcomer.org/blog/2022-12-15-01/</guid>
+            <description>&lt;p&gt;Baking is one of those activities that has been around for ages, but you don’t just stumble upon it. I was exposed to baking by my grandmother’s breads and my mother’s cookies growing up. Although I never truly understood the skill that went into making such delicious food, I’ve started trying my hand at it.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;for-fun&quot;&gt;For Fun?&lt;&#x2F;h2&gt;
+&lt;p&gt;What’s more fun than making something delicious from scratch with your own two hands? Nothing really comes to mind.&lt;&#x2F;p&gt;
+&lt;p&gt;Bread in its most simple form is &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;www.kingarthurbaking.com&#x2F;recipes&#x2F;peasant-bread-recipe&quot;&gt;flour, water, salt, yeast, and sugar&lt;&#x2F;a&gt;, and it’s downright delicious. You really only need a bowl, a spoon, a pan, and some counter space to get started. Given those items, the only ingredient left is skill. Making a consistent loaf of bread requires skill and almost becomes like a game to best yourself each time you try. It’s a low stakes game that 99% of the time yields fresh food to enjoy. &lt;em&gt;That and your house smells &lt;strong&gt;amazing&lt;&#x2F;strong&gt; for 3-5 days afterwards.&lt;&#x2F;em&gt; What’s not to love?&lt;&#x2F;p&gt;
+&lt;p&gt;Once you’ve mastered the basics, why not move on to more complicated recipes or different styles of baked goods? Cakes and pastries are a good stepping stone in difficulty. In return for the extra effort, you get a more complex dish to showcase your work. Breads are really versatile, but a fresh cake on a birthday or a pie for the holidays takes it up a notch.&lt;&#x2F;p&gt;
+&lt;p&gt;Ultimately, the sky is the limit. Once you become familiar with the fundamental processes that power baking&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;, you can hone your own recipes or modify existing ones on the fly. That’s all to say that it’s really fulfilling and fun to bake something from scratch.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;for-profit&quot;&gt;For Profit?&lt;&#x2F;h2&gt;
+&lt;p&gt;When I say “profit,” I don’t mean financial gain; I take it to mean some material benefit or surplus that I create. Baked goods, bread in particular, have &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;wikipedia.org&#x2F;wiki&#x2F;Baking?lang=en#Cultural_and_religious_significance&quot;&gt;cultural and religious significance&lt;&#x2F;a&gt; beyond just being a delicious food. In many Eastern European cultures, bread and salt are foods offered to guests when they arrive. Although I don’t subscribe to the religious beliefs, I acknowledge what bread represents and believe it can be more than just a staple food.&lt;&#x2F;p&gt;
+&lt;p&gt;One of the activities I’ve made a habit out of recently is baking batches of bread for friends. Instead of buying something premade from the grocery store, I believe that the effort and skill required to make the bread represents the intent behind giving it to them more than the item itself. It’s my way of saying “I made this specifically for you, and I hope you enjoy it.” It’s often a physical way of expressing a feeling or sentiment that my words fail to.&lt;&#x2F;p&gt;
+&lt;p&gt;The surplus from baking arises from the satisfaction I derive making and delivering it to my friend. Bonus points if I’m able to keep it a surprise. I think that my hobby sounds weird without context, but I genuinely derive a sense of satisfaction and closeness with my friends while giving them something to enjoy.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;&#x2F;sup&gt;
+&lt;p&gt;Despite the age of the &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;upload.wikimedia.org&#x2F;wikipedia&#x2F;commons&#x2F;2&#x2F;25&#x2F;The_chemistry_of_breadmaking_%28IA_0276CHEM%29.pdf&quot;&gt;book&lt;&#x2F;a&gt;, pages 168-186 of the PDF do a fair job summarizing the chemical process of baking bread.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+</description>
+        </item>
+        <item>
+            <title>Living With a Dumb Phone</title>
+            <pubDate>Tue, 13 Dec 2022 00:00:00 +0000</pubDate>
+            <link>https://www.mattnewcomer.org/blog/2022-12-13-01/</link>
+            <guid>https://www.mattnewcomer.org/blog/2022-12-13-01/</guid>
+            <description>&lt;p&gt;In October of 2022 I sold my shiny iPhone 11 Pro Max and traded to a credit card sized monochrome brick of a “smart” phone. This article is a summary of my experience ditching my old phone and moving to a credit card sized minimal phone.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;wait-why-did-i-sell-my-pocket-supercomputer&quot;&gt;Wait, Why Did I Sell My Pocket Supercomputer?&lt;&#x2F;h2&gt;
+&lt;p&gt;Like many other people my age, I grew up with a smart phone always within arm’s reach. I never really questioned why I needed such a device at such a young age because it was new and the cool thing to have. The first time I noticed that I disliked my smartphone was because it was become a crutch in way too many situations. By crutch, I mean a thing that you depend on to the point of reliance. Once I realized that I was beholden to the smartphone I started to notice other things.&lt;&#x2F;p&gt;
+&lt;p&gt;iPhones have this cool feature where they record the amount of time you spend on your phone per day and in which apps you spend your time. On every Sunday(?) it sends you a notification to review your screen time and &lt;em&gt;&lt;strong&gt;holy moly&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt; was I spending a lot of time doing mindless things. It wound up being like 4+ hours &lt;em&gt;per day&lt;&#x2F;em&gt; using my phone for absolutely no reason. Half of this number was me lackign the self control to put it down and do something else, but I’d also like to believe that the other half was these apps being so damn addictive. Bright colors, incessant notifications, my friends using them … all key ingredients on getting me to keep coming back. Strike 1 for the iPhone.&lt;&#x2F;p&gt;
+&lt;p&gt;Smartphones also have this magical ability to stifle genuine social interactions. Imagine you’re out for a walk with a friend enjoying the weather. You’re both having a great conversation, but it slowly dies out and silence fills the space between both of you. Nothing else can disrupt the moment like the other person feeling the need to check Instagram or take a Snapchat. I find the feeling of having that moment tarnished extremely grating and I wanted to stop myself from ruining another one. Strike 2.&lt;&#x2F;p&gt;
+&lt;p&gt;Finally, iPhones have blue bubbles to signal that you (yes, you!) are the proud owner of an Apple device. People my age like to grandstand against the dreaded green bubble because it’s “ugly” and “not blue”; I never realized colors were that important. People also criticize green bubbles for lower image quality and a smaller feature set, but if you’re talking to a friend does that &lt;em&gt;really&lt;&#x2F;em&gt; matter? For a multitude of reasons that I’ll skip for now, I don’t believe Apple should have a stranglehold on the U.S. smartphone market. If me switching to something else means I can keep my money away from Apple, I’ll do it. Strike 3, iPhone’s out.&lt;&#x2F;p&gt;
+&lt;p&gt;Now that I was set on ditching my smartphone, started talking about it with friends, and they had some reasonable questions:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Can’t you just turn off notifications and make your phone greyscale?&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Yes, I absolutely could have, but I lacked the self control to keep these settings enabled. And anyways, most apps you use are not designed for greyscale and come out looking like a cloudy sky instead of being usable.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Screen time lets you limit time in apps. Why not enable that?&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;I enabled it on apps like YouTube that were purely time wasters but I always bypassed the limit. Apps like Snapchat were a social “necessity” at the time so limiting them felt the same as deleting them.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Isn’t it a lot of work to move everything over?&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Yes, and I fully acknowledged the amount of work, time, and money it would cost to move everything over to a new device. Once I realized the problems I had with my iPhone were deep rooted I was willing to invest that effort in to getting rid of it.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-did-i-consider-while-looking-for-a-new-device&quot;&gt;What Did I Consider While Looking for a New Device?&lt;&#x2F;h2&gt;
+&lt;p&gt;Not to sound like a sales pitch, but I settled on a few key things a new phone would have to do for it to be worth the effort. When I started the search, I knew I wanted a smaller phone that was the bare necessities only.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Restrictiveness&lt;&#x2F;strong&gt;: The constraints imposed by the phone can’t be disabled. The features provided by the phone should be enough to keep me safe and in contact with friends and family. Not much else.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Form Factor&lt;&#x2F;strong&gt;: The phone should be small enough to disappear into a pocket.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Features&lt;&#x2F;strong&gt;: The phone should connect to the 4G cell network.&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; The phone shouldn’t be able to download apps or access the internet. Just texting and calling, please.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Cost&lt;&#x2F;strong&gt;: Lower volume products are typically more expensive due to economies of scale not kicking in to the same extent. That said, I was hoping to pay less than $400 USD.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Durability&lt;&#x2F;strong&gt;: Survives a few drops from waist height when I inevitably miss my pocket while in a hurry.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;so-what-did-i-buy&quot;&gt;So What Did I Buy?&lt;&#x2F;h2&gt;
+&lt;p&gt;I ended up settling on the &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;www.thelightphone.com&#x2F;&quot;&gt;Light Phone II&lt;&#x2F;a&gt;, a $299 USD smart phone with an e-ink display and not much else. The phone sells itself on being used as little as possible which manifests in the ethos of “going light.” This translates to not having social media, news, email, an internet browser, or feeds. Instead, you’re presented with small set of tools in a “toolbox” which is equivalent to a home screen:&lt;&#x2F;p&gt;
+&lt;figure &gt;
+&lt;a href=https:&amp;#x2F;&amp;#x2F;www.thelightphone.com&amp;#x2F;&gt;
+&lt;img src=&quot;toolbox.gif&quot;
+    alt=&quot;Sample screens of the Light Phone II on rotation&quot;
+    width=&quot;350&quot;
+    
+    &#x2F;&gt;
+&lt;&#x2F;a&gt;
+&lt;figcaption&gt;Example screens from Light Phone II applications, credit The Light Phone Inc.&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;&lt;strong&gt;Each application has some quirks to it, but they’re all brutally simple:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Alarm
+&lt;ul&gt;
+&lt;li&gt;Sets a single alarm which can be enabled or disabled.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Calculator
+&lt;ul&gt;
+&lt;li&gt;A four function calculator that does exactly what you’d expect.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Directions
+&lt;ul&gt;
+&lt;li&gt;A GPS-powered point-to-point route finder for walking, public transit, and driving.&lt;&#x2F;li&gt;
+&lt;li&gt;Has rudimentary voice directions while driving.&lt;&#x2F;li&gt;
+&lt;li&gt;Provides a GPS test utility to diagnose issues.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Hotspot
+&lt;ul&gt;
+&lt;li&gt;A WiFi network where and when you need one.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Music
+&lt;ul&gt;
+&lt;li&gt;Up to 1 GB of music files in a single playlist.&lt;&#x2F;li&gt;
+&lt;li&gt;No streaming services, you manually upload files via a web interface.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Notes
+&lt;ul&gt;
+&lt;li&gt;Make audio recordings or type text notes.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Phone
+&lt;ul&gt;
+&lt;li&gt;Call, text and manage contacts.&lt;&#x2F;li&gt;
+&lt;li&gt;Phone cannot display received images or navigate to received links, they go to your email.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Podcast
+&lt;ul&gt;
+&lt;li&gt;Subscribe to podcasts via the web interface.&lt;&#x2F;li&gt;
+&lt;li&gt;Syncs when on WiFi, supports offline listening.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Settings
+&lt;ul&gt;
+&lt;li&gt;View diagnostic information and configure how the device acts.&lt;&#x2F;li&gt;
+&lt;li&gt;Can set display to white or black background, matches phone color by default.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Some hardware features to note:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;The phone has a 3.5mm headphone jack
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ALL HAIL THE RETURN OF THE SUPERIOR CONNECTOR&lt;&#x2F;strong&gt;&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#2&quot;&gt;2&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;The phone lacks a camera&lt;&#x2F;li&gt;
+&lt;li&gt;The phone charges via micro USB
+&lt;ul&gt;
+&lt;li&gt;The worst USB is back, although workarounds exist.&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#3&quot;&gt;3&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;The phone has a small battery
+&lt;ul&gt;
+&lt;li&gt;Compared to an iPhone’s ~3000 mAh battery, the Light Phone II has a measly 950 mAh by comparison.&lt;&#x2F;li&gt;
+&lt;li&gt;Most of the phone’s energy is spent using its radios, so don’t expect stellar battery life compared to an iPhone.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;The phone screen is monochrome and is slow to refresh
+&lt;ul&gt;
+&lt;li&gt;A limitation of &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Electronic_paper&quot;&gt;e-ink&lt;&#x2F;a&gt; is that is takes a while for the screen to display a new image.&lt;&#x2F;li&gt;
+&lt;li&gt;The screen can “flicker” when it updates as it flashes between black and white to render text.&lt;&#x2F;li&gt;
+&lt;li&gt;The phone looks best in full sunlight, though it has a backlight for use in dark environments.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;The phone has solid Wifi, Bluetooth, and cellular capabilities
+&lt;ul&gt;
+&lt;li&gt;All three technologies work exactly as you’d expect without any issues that I’ve noticed.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Most SMS features still work as you’d expect
+&lt;ul&gt;
+&lt;li&gt;Group texting works exactly the same as on Android devices&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;how-was-it-getting-started-with-it&quot;&gt;How Was It Getting Started With It?&lt;&#x2F;h2&gt;
+&lt;p&gt;Not that bad.&lt;&#x2F;p&gt;
+&lt;p&gt;The first issue I had to fix was the &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;www.thelightphone.com&#x2F;compatibility-checker&quot;&gt;limited cellular providers&lt;&#x2F;a&gt; that the phone is compatible with. My old plan was not going to be compatible with the phone, so I ended up porting my number to Mint Mobile where I got the cheapest plan I possibly could.&lt;&#x2F;p&gt;
+&lt;p&gt;The second issue never really arrived.&lt;&#x2F;p&gt;
+&lt;p&gt;Before my phone arrived, I noted down what I used my old phone for that I couldn’t do without. For example, I use it as a second factor to log into a university system. I still needed to do that, so I sidestepped the phone’s limitations by getting a hardware key that I physically plug into the computer I am using to authenticate myself.&lt;&#x2F;p&gt;
+&lt;p&gt;Another issue is that the phone can’t really be used for multitasking. Although the phone has a notes app, talking on the phone and writing notes isn’t practical. I  started carrying a notebook and pen so I can talk and record what I need. A fun side effect is that I always have a notebook on me and can doodle more often!&lt;&#x2F;p&gt;
+&lt;p&gt;Surprisingly, my friends didn’t mind the green bubbles. It almost serves as a sort of litmus test to see if a person is caught up in the pointless brand rivalry; if someone made a point of picking on me over the color of the bubbles, maybe our priorities aren’t aligned.&lt;&#x2F;p&gt;
+&lt;p&gt;The last thing of note is not having a camera. When people learn that the phone doesn’t have a camera, they typically give me a puzzled look and ask&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;How do you take photos of stuff?&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Simple, I don’t. If it’s important, I write it down. If it’s beautiful, I admire then move on. I wish I had a camera to take photos from walks or hikes, but that’s for another time in the future.&lt;&#x2F;p&gt;
+&lt;p&gt;It’s worth noting that all of the fixes I just mentioned are harder than just using a smartphone, but to me the difficulty is worth it. The calculus may not work out the same for you, and that’s alright.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-s-it-like-living-with-it&quot;&gt;What’s It Like Living With It?&lt;&#x2F;h2&gt;
+&lt;p&gt;Honestly, I just stopped noticing anything was different after the first month.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Some things stayed the same:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Like any other smartphone, nightly charging remained a part of my routine to keep it ready for the next day. I can consistently get a day and a half out of the phone before it needs to be recharged. The phone has a battery percentage indicator which is nice, but once I got used to how the battery drains I stopped looking at it.&lt;&#x2F;p&gt;
+&lt;p&gt;My phone also comes with me pretty much anywhere I go, but I don’t check it nearly as often. I used to get &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Phantom_vibration_syndrome&quot;&gt;phantom vibrations&lt;&#x2F;a&gt; which drove me to check my phone incessantly but now it’s just kinda “there” when I need it. I still listen to music when I ride the bus or am working around the house, but the limited variety I can store on my phone (as imposed by the 1GB size limit) pushes me to listen less often.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Some things changed slowly over time:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Texting on such a small screen is a &lt;em&gt;&lt;strong&gt;chore&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;. Getting a sentence or two takes a few tries which is fine, but in a pinch it can be a pain. The phone has a speech to text functionality which is pretty accurate, but punctuation really messes with it. My “workaround” if you want to call it that is just calling people. It’s become a regular highlight of my week to call my friends and parents to check in and catch up. Instead of conversations dragging out over hours through the day over text, I can call someone for 15 minutes in the afternoon or evening and have a much nicer conversation where I don’t have to constantly clarify what gets lost over text.&lt;&#x2F;p&gt;
+&lt;p&gt;Because spotify just isn’t a thing on my phone, I ended up cancelling that subscription pretty early on. Every week or two I sit down for 15 to 30 minutes and pick a few albums and artists that I want to listen to. I gather all of the mp3’s and upload them to the web interface where they are compressed and downloaded to my phone. A little bit of playlist ordering and less than an hour later I have my playlist for the next little while ready to go.&lt;&#x2F;p&gt;
+&lt;p&gt;I’ve also gotten used to telling people that images they send me will be seen “sometime later when I get to my computer.” I used to be the kind of person to fix issues as soon as they arose, but now “it can wait” has become a common saying when I’m out and about.&lt;&#x2F;p&gt;
+&lt;p&gt;Lastly, telling people that I have a dumb phone and showing it to them elicits one of two reactions:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Wow, that’s so cool. I’v been thinking about doing this too!&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;or&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Why would you do this to yourself?&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;It’s pretty much a 50&#x2F;50 split between admiration and pity. I still don’t have a great response to either, but it’s cool to know that my actions aren’t on the fringes.&lt;&#x2F;p&gt;
+&lt;p&gt;Overall, disconnecting from the supercomputer and moving to what I lovingly call “the brick” has been the impetus for a total mode shift on how I view and interact with technology.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-advantages&quot;&gt;The Advantages&lt;&#x2F;h2&gt;
+&lt;p&gt;First and foremost, I have hours more added back to my day that I would have otherwise spent doing mindless things. While I work on reports or projects I’m just not tempted to do stuff on my phone because there’s just nothing to do. What am I going to do on it, open the settings and mindlessly navigate the menus? I’d rather watch paint dry.&lt;&#x2F;p&gt;
+&lt;p&gt;Furthermore, it just blends in. I have no desire to get a new phone because this one just works. I don’t have to fuss with store apps, new features, or anything that is on the cutting edge.&lt;&#x2F;p&gt;
+&lt;p&gt;I don’t have anything else to say because &lt;em&gt;it just works&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-disadvantages&quot;&gt;The Disadvantages&lt;&#x2F;h2&gt;
+&lt;p&gt;Not having a camera sucks at times. If I want a photo of something I have to ask someone with me to take it for me. 90% of the time this doesn’t cause any issues, but the remainder of the time I can miss what I wanted a photo of by the time I find someone.&lt;&#x2F;p&gt;
+&lt;p&gt;Many organizations and businesses use QR codes so people can access links on their smartphones. Well, what if your phone doesn’t have a camera &lt;strong&gt;or&lt;&#x2F;strong&gt; a web browser? It requires getting creative, which can get annoying.&lt;&#x2F;p&gt;
+&lt;p&gt;Micro USB is in a word, bad. It’s old, wears out easily, and goes in one way. There are workarounds, though.&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#3&quot;&gt;3&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; There also aren’t that many of these in the wild, so the secondary market is still expensive and third party accessories are borderline non-existent. Software quirks still happen, but are infrequent and usually impact low priority things.&lt;&#x2F;p&gt;
+&lt;p&gt;The most noticeable disadvantage (turn advantage?) is that you’re the person in the room bucking social norms. It’s fun to be different, but sometimes it’s weird being the odd one out.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;would-i-do-it-again&quot;&gt;Would I Do It Again?&lt;&#x2F;h2&gt;
+&lt;p&gt;Absolutely.&lt;&#x2F;p&gt;
+&lt;p&gt;The extra time and mental headspace is worth the extra effort that is required to get things done. At first I viewed the change as a very un-scientific experiment, but now it’s just how I use my phone.&lt;&#x2F;p&gt;
+&lt;p&gt;Without being too reductionist, I think phones are just boxes that should be used to communicate with other people. The Light Phone II fills this need for me perfectly plus a few “nice to haves.” It has melted into the background at this point to where I don’t have to think about it. I grab it in the morning, listen to some music, call my friends, text my parents, plug it in at night, and repeat tomorrow. I don’t think I want anything more or less.&lt;&#x2F;p&gt;
+&lt;p&gt;The looks some people give me when they see my little brick phone in public are priceless, too.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;&#x2F;sup&gt;
+&lt;p&gt;Many “feature phones” are restricted to 2G or 3G networks which are slowly being &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;www.att.com&#x2F;support&#x2F;article&#x2F;wireless&#x2F;KM1324171&quot;&gt;phased out&lt;&#x2F;a&gt; across the country.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;2&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;2&lt;&#x2F;sup&gt;
+&lt;p&gt;It just works, it spins, it doesn’t need a battery. What else do you want?&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;3&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;3&lt;&#x2F;sup&gt;
+&lt;p&gt;The workaround I use is a magnetic adapter that has two parts; one that stays in the phone and one that connects to a USB-C cable. This reduces port wear on the phone which increases its lifespan while allowing me to use the superior USB-C connector. No data is transferred via this port, so you don’t have to find a connector that does data in addition to power.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+</description>
+        </item>
+        <item>
+            <title>100 Days To Offload</title>
+            <pubDate>Wed, 07 Dec 2022 00:00:00 +0000</pubDate>
+            <link>https://www.mattnewcomer.org/blog/2022-12-07-01/</link>
+            <guid>https://www.mattnewcomer.org/blog/2022-12-07-01/</guid>
+            <description>&lt;p&gt;I’m not that great at writing.&lt;&#x2F;p&gt;
+&lt;p&gt;Whenever I think about writing, I feel a big swell of anxiety and inevitably say I’ll do it tomorrow. It’s primarily because hitting post feels like yelling into the void for someone to read my thoughts. The Internet also has a magical way of letting words stick around forever.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Pretty scary stuff.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Recently, I found &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;100daystooffload.com&#x2F;&quot;&gt;100 Days To Offload&lt;&#x2F;a&gt;. It’s a challenge to write and upload 100 posts within a year. The challenge sounds like a weird way to &lt;em&gt;&lt;strong&gt;jumpstart your blog with this 1 easy trick they don’t want you to know about&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;, but it’s more a deadline for me to work against.&lt;&#x2F;p&gt;
+&lt;p&gt;From 1 January 2023 to 31 December 2023, I plan to upload 100 things.&lt;&#x2F;p&gt;
+&lt;p&gt;Plain and simple.&lt;&#x2F;p&gt;
+</description>
+        </item>
+    </channel>
+</rss>
