@@ -7,21 +7,7 @@
         <generator>Zola</generator>
         <language>en</language>
         <atom:link href="https://www.mattnewcomer.org/rss.xml" rel="self" type="application/rss+xml"/>
-        <lastBuildDate>Thu, 09 Feb 2023 00:00:00 +0000</lastBuildDate>
-        <item>
-            <title>ChatGPT Is a Solution in Search of a Problem</title>
-            <pubDate>Thu, 09 Feb 2023 00:00:00 +0000</pubDate>
-            <link>https://www.mattnewcomer.org/blog/2023-02-09-01/</link>
-            <guid>https://www.mattnewcomer.org/blog/2023-02-09-01/</guid>
-            <description>&lt;p&gt;Recently, large language models (LLMs) have been near the center of the collective consciousness. Numerous humorous and enlightening Twitter threads have been authored about what promise the future holds as the technology improves and the parameter count grows. Not to be a luddite, but I think that the trial-by-fire that we’ve witnessed over the past few months is definitive proof that we need to reevaluate our connection with the technology.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;social-media-as-an-accelerant&quot;&gt;Social Media as an Accelerant&lt;&#x2F;h2&gt;
-&lt;h2 id=&quot;a-fake-subject-matter-expert&quot;&gt;A (Fake) Subject Matter Expert&lt;&#x2F;h2&gt;
-&lt;h2 id=&quot;hallucinations&quot;&gt;Hallucinations&lt;&#x2F;h2&gt;
-&lt;h2 id=&quot;rushing-to-market&quot;&gt;Rushing to Market&lt;&#x2F;h2&gt;
-&lt;h2 id=&quot;the-attribution-problem&quot;&gt;The Attribution Problem&lt;&#x2F;h2&gt;
-&lt;h2 id=&quot;is-this-a-good-thing&quot;&gt;Is This A Good Thing?&lt;&#x2F;h2&gt;
-</description>
-        </item>
+        <lastBuildDate>Wed, 08 Feb 2023 00:00:00 +0000</lastBuildDate>
         <item>
             <title>KaTeX Demonstration</title>
             <pubDate>Mon, 06 Feb 2023 00:00:00 +0000</pubDate>
