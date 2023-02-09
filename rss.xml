@@ -7,19 +7,53 @@
         <generator>Zola</generator>
         <language>en</language>
         <atom:link href="https://www.mattnewcomer.org/rss.xml" rel="self" type="application/rss+xml"/>
-        <lastBuildDate>Wed, 08 Feb 2023 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Thu, 09 Feb 2023 00:00:00 +0000</lastBuildDate>
+        <item>
+            <title>ChatGPT Is a Solution in Search of a Problem</title>
+            <pubDate>Thu, 09 Feb 2023 00:00:00 +0000</pubDate>
+            <link>https://www.mattnewcomer.org/blog/2023-02-09-01/</link>
+            <guid>https://www.mattnewcomer.org/blog/2023-02-09-01/</guid>
+            <description>&lt;p&gt;Recently, large language models (LLMs) have been near the center of the collective consciousness. Numerous humorous and enlightening Twitter threads have been authored about what promise the future holds as the technology improves and the parameter count grows. Not to be a luddite, but I think that the trial-by-fire that we’ve witnessed over the past few months is definitive proof that we need to reevaluate our connection with the technology.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;social-media-as-an-accelerant&quot;&gt;Social Media as an Accelerant&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;a-fake-subject-matter-expert&quot;&gt;A (Fake) Subject Matter Expert&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;hallucinations&quot;&gt;Hallucinations&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;rushing-to-market&quot;&gt;Rushing to Market&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;the-attribution-problem&quot;&gt;The Attribution Problem&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;is-this-a-good-thing&quot;&gt;Is This A Good Thing?&lt;&#x2F;h2&gt;
+</description>
+        </item>
         <item>
             <title>KaTeX Demonstration</title>
             <pubDate>Mon, 06 Feb 2023 00:00:00 +0000</pubDate>
             <link>https://www.mattnewcomer.org/blog/2023-02-06-01/</link>
             <guid>https://www.mattnewcomer.org/blog/2023-02-06-01/</guid>
             <description>&lt;p&gt;Because Zola doesn’t support KaTeX out of the box, I ended up writing a JavaScript program to compile and inject it into the DOM before serializing into HTML. Please, enjoy the meta compilation madness.&lt;&#x2F;p&gt;
-&lt;div data-display=&quot;display&quot; class=&quot;math-display-block&quot;&gt;TD_{1}(L_{16} \parallel R_{16}) = L_{15} \oplus F(k_{16}, R_{15}) \parallel R_{16} \oplus F(k_{16}, L_{15} \oplus F(k_{16}, R_{15}))&lt;&#x2F;div&gt;
+&lt;div 
+data-display=&quot;display&quot; 
+class=&quot;math-display-block&quot;&gt;
+TD_{1}(L_{16} \parallel R_{16}) = L_{15} \oplus F(k_{16}, R_{15}) \parallel R_{16} \oplus F(k_{16}, L_{15} \oplus F(k_{16}, R_{15}))
+&lt;&#x2F;div&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;div  class=&quot;math-display-block&quot;&gt;\omega &#x27; = \omega _0 \sqrt {1 - \left( {\frac{b}{{2m\omega _0 }}} \right)^2 } = \omega _0 \sqrt {1 - \frac{1}{{4Q^2 }}}&lt;&#x2F;div&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;div  class=&quot;math-display-block&quot;&gt;R = \frac{{2GM}}{{c^2 }}&lt;&#x2F;div&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;div  class=&quot;math-display-block&quot;&gt;e^{\pi i} + 1 = 0= \cos(\pi) + i \sin(\pi)&lt;&#x2F;div&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;div  class=&quot;math-display-block&quot;&gt;\int {\tan (ax)} dx = - \frac{1}{a}\ln \left| {\cos (ax)} \right| + c&lt;&#x2F;div&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;div 
+ 
+class=&quot;math-display-block&quot;&gt;
+\omega &#x27; = \omega _0 \sqrt {1 - \left( {\frac{b}{{2m\omega _0 }}} \right)^2 } = \omega _0 \sqrt {1 - \frac{1}{{4Q^2 }}}
+&lt;&#x2F;div&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;div 
+ 
+class=&quot;math-display-block&quot;&gt;
+R = \frac{{2GM}}{{c^2 }}
+&lt;&#x2F;div&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;div 
+ 
+class=&quot;math-display-block&quot;&gt;
+e^{\pi i} + 1 = 0= \cos(\pi) + i \sin(\pi)
+&lt;&#x2F;div&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;div 
+ 
+class=&quot;math-display-block&quot;&gt;
+\int {\tan (ax)} dx = - \frac{1}{a}\ln \left| {\cos (ax)} \right| + c
+&lt;&#x2F;div&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;p&gt;For those interested, here is the JavaScript that powers the KaTeX generation and DOM injection. &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;kosalab.dev&quot;&gt;Kieran&lt;&#x2F;a&gt; helped me resolve the infinite recursion problem that resulted from using &lt;code&gt;getElementsByClassName()&lt;&#x2F;code&gt;. Many thanks!&lt;&#x2F;p&gt;
 &lt;pre data-linenos data-lang=&quot;js&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-js &quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;1&lt;&#x2F;td&gt;&lt;td&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;fs &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;require&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;fs&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;);
@@ -57,7 +91,7 @@
 &lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;33&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;fs.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;writeFileSync&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;out_filename&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;dom.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;serialize&lt;&#x2F;span&gt;&lt;span&gt;());
 &lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;34&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;});
 &lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;This code is available in full on &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matt-newcomer&#x2F;katex_injecter&quot;&gt;GitHub&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;This code is available in full on &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matt-newcomer&#x2F;katex_injector&quot;&gt;GitHub&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </description>
         </item>
         <item>
