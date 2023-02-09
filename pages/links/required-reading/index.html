@@ -1,0 +1,23 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta content="width=device-width,initial-scale=1" name=viewport><meta name=description><title>mattn | Required Reading</title><style>html {
+            visibility: hidden;
+            opacity: 0;
+        }</style><link href=https://www.mattnewcomer.org/style.css rel=stylesheet><link href=https://www.mattnewcomer.org/katex.css rel=stylesheet><body><header class=space><a href=https://www.mattnewcomer.org>← Home</a></header><main><h1>Required Reading</h1><div class=space></div><h3 id=computer-scuence>Computer Scuence</h3><ul><li><a href=https://github.com/papers-we-love/papers-we-love rel=noreferrer>Papers We Love</a></ul><h3 id=linux>Linux</h3><ul><li><a href=https://lym.readthedocs.io/en/latest/index.html rel=noreferrer>Commands</a><li><a href=https://justine.lol/cosmopolitan/functions.html rel=noreferrer>System Call Platform Dependencies</a></ul><h3 id=logic>Logic</h3><ul><li><a href=https://www.lesswrong.com/ rel=noreferrer>LessWrong</a></ul><h3 id=math>Math</h3><ul><li><a href=https://arbital.com/explore/math rel=noreferrer>Arbital</a><li><a href=https://calculusmadeeasy.org/ rel=noreferrer>Calculus Made Easy</a></ul><h3 id=miscellaneous>Miscellaneous</h3><ul><li><a href=https://digital.library.unt.edu/ark:/67531/metadc1279277/m2/1/high_res_d/10117359.pdf rel=noreferrer>Nuclear Waste Intrusion Deterrence</a></ul><h3 id=programming>Programming</h3><ul><li><a href=https://devdocs.io/ rel=noreferrer>devdocs.io</a><li><a href=https://search.feep.dev/ rel=noreferrer>feep! search</a><li><a href=https://sethrobertson.github.io/GitFixUm/fixup.html rel=noreferrer>Help! My <code>git</code> commit fucked up!</a></ul><h3 id=rfc>RFC</h3><ul><li><a href=https://www.rfc-editor.org/rfc/rfc1925 rel=noreferrer>RFC1925</a><li><a href=https://www.rfc-editor.org/rfc/rfc2324 rel=noreferrer>RFC2324</a>/<a href=https://www.rfc-editor.org/rfc/rfc7168 rel=noreferrer>RFC7168</a><li><a href=https://www.rfc-editor.org/rfc/rfc7169 rel=noreferrer>RFC7169</a><li><a href=https://www.rfc-editor.org/rfc/rfc7511 rel=noreferrer>RFC7511</a></ul></main><div class=dark-mode-buttons><button class=dark-mode-button id=dark-mode-on><img alt="Dark mode" aria-label="dark mode toggle" title="Dark mode" height=24 src=https://www.mattnewcomer.org/dark_mode.svg width=24></button><button class=dark-mode-button id=dark-mode-off><img alt="Light mode" aria-label="light mode toggle" title="Light mode" height=24 src=https://www.mattnewcomer.org/light_mode.svg width=24></button></div><script>const cls = document.body.classList;
+        const getSessionTheme = sessionStorage.getItem("theme");
+        if (getSessionTheme === "dark") {
+            cls.toggle("dark-mode", true);
+        } else if (getSessionTheme === "light") {
+            cls.toggle("dark-mode", false);
+        } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            cls.toggle("dark-mode", true);
+        }
+
+        document.getElementById("dark-mode-on").addEventListener("click", function(e) {
+            cls.toggle("dark-mode", true);
+            sessionStorage.setItem("theme", "dark");
+        });
+        document.getElementById("dark-mode-off").addEventListener("click", function(e) {
+            cls.toggle("dark-mode", false);
+            sessionStorage.setItem("theme", "light");
+        });</script><noscript><style>.dark-mode-buttons {
+                display: none;
+            }</style></noscript>
