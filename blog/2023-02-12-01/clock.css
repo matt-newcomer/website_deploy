@@ -1,0 +1,14 @@
+
+.clock_text{
+    line-height: 1.3em;
+    font-size: 30pt;
+    text-align: center;
+    text-decoration: underline;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.clock_text p{
+    margin: 0;
+    padding: 0;
+}
