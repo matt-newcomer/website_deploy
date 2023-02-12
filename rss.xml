@@ -7,7 +7,31 @@
         <generator>Zola</generator>
         <language>en</language>
         <atom:link href="https://www.mattnewcomer.org/rss.xml" rel="self" type="application/rss+xml"/>
-        <lastBuildDate>Wed, 08 Feb 2023 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Sat, 11 Feb 2023 00:00:00 +0000</lastBuildDate>
+        <item>
+            <title>32-bit Counters Beware</title>
+            <pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate>
+            <link>https://www.mattnewcomer.org/blog/2023-02-11-01/</link>
+            <guid>https://www.mattnewcomer.org/blog/2023-02-11-01/</guid>
+            <description>&lt;p&gt;&lt;noscript&gt;This page won’t display any updating dates or times with JavaScript disabled. Sorry!&lt;&#x2F;noscript&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I regret to inform you that some computers might have a bad time in a little while. Specifically, on&lt;&#x2F;p&gt;
+&lt;div class = &quot;clock_text&quot;&gt;Tue, 19 January 2038 03:14:07 GMT&lt;&#x2F;div&gt;
+&lt;p&gt;32 bit computers that store &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Unix_time&quot;&gt;Unix time&lt;&#x2F;a&gt;stamps  in &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Two%27s_complement&quot;&gt;two’s complement&lt;&#x2F;a&gt; representation will… run out of time. Right now, the current time is represented as &lt;&#x2F;p&gt;
+&lt;div class = &quot;clock_text&quot;&gt;&lt;p id=&quot;binary_time&quot;&gt;00000000000000000000000000000000&lt;&#x2F;p&gt;&lt;&#x2F;div&gt;
+&lt;p&gt;on 32 bit machines. Once the leftmost digit flips from 0 to 1, the number becomes negative. That roughly works out to moving back 136 years in one second. Not to scare you, but there are &lt;&#x2F;p&gt;
+&lt;div class = &quot;clock_text&quot;&gt;&lt;p id=&quot;seconds_left&quot;&gt;0&lt;&#x2F;p&gt;&lt;&#x2F;div&gt;
+&lt;p&gt;seconds left until 32 bit clocks run out. That seems like a really long time&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;, but it’s only&lt;&#x2F;p&gt;
+&lt;div class = &quot;clock_text&quot;&gt;&lt;p id=&quot;time_left&quot;&gt;0 years, 0 days, 0 hours, 0 minutes, 0 seconds&lt;&#x2F;p&gt;&lt;&#x2F;div&gt;
+&lt;p&gt;away. Until then, the &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Unix_time&quot;&gt;year 2038 problem&lt;&#x2F;a&gt; lies in wait.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;link rel=&quot;stylesheet&quot;  href=&quot;clock.css&quot; defer&#x2F;&gt;
+&lt;script 
+src=&quot;clock.js&quot; 
+type=&quot;application&#x2F;javascript&quot; 
+referrerpolicy=&quot;no-referrer&quot; 
+&gt;&lt;&#x2F;script&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; This code has purposefully not been tested for what will happen 20 January 2038.&lt;&#x2F;p&gt;
+</description>
+        </item>
         <item>
             <title>KaTeX Demonstration</title>
             <pubDate>Mon, 06 Feb 2023 00:00:00 +0000</pubDate>
