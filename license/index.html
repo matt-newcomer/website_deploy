@@ -1,0 +1,23 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta content="width=device-width,initial-scale=1" name=viewport><meta name=description><title>mattn | License</title><style>html {
+            visibility: hidden;
+            opacity: 0;
+        }</style><link href=https://www.mattnewcomer.org/style.css rel=stylesheet><link href=https://www.mattnewcomer.org/katex.css rel=stylesheet><body><header class=space><a href=https://www.mattnewcomer.org>← Home</a></header><main><h1>License</h1><div class=space></div><h3 id=content>Content</h3><p>Unless otherwise stated, the images and text of this site are licensed under the <a href=http://creativecommons.org/licenses/by-nc-sa/4.0/ rel=noreferrer>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.<p>The full license text is available <a href=https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode rel=noreferrer>here</a>.<h3 id=code>Code</h3><p>Any source on this site is subject to the <a href=https://mit-license.org/ rel=noreferrer>MIT license</a>.<p>The files served on this website are available <a href=https://github.com/matt-newcomer/website_deploy rel=noreferrer>here</a>.<h3 id=supporting-tools>Supporting Tools</h3><ul><li><p><a href=https://github.com/getzola/zola rel=noreferrer>Zola</a> is used to statically generate the site and is <a href=https://github.com/getzola/zola/blob/master/LICENSE rel=noreferrer>MIT</a> licensed.</p><li><p><a href=https://github.com/InputUsername/zola-hook rel=noreferrer>Hook</a> provides the site theme and is <a href=https://github.com/InputUsername/zola-hook/blob/main/LICENSE rel=noreferrer>MIT</a> licensed.</p><li><p><a href=https://fontlibrary.org/en/font/overpass rel=noreferrer>Overpass</a> is the main font and is licensed under the <a href=http://scripts.sil.org/OFL rel=noreferrer>OFL</a>.</p><li><p><a href=https://fontlibrary.org/en/font/fira-code rel=noreferrer>Fira Code</a> is the monospace font and is licensed under the <a href=http://scripts.sil.org/OFL rel=noreferrer>OFL</a>.</p></ul><h3 id=my-views>My Views</h3><p>The views expressed in this website are my own. They have not been reviewed or approved by my employer.<h3 id=privacy-policy>Privacy Policy</h3><p>I ❤️ privacy, and I intend to respect yours. This site has no mechanisms to track users and no data is stored from your visit server-side.</main><div class=dark-mode-buttons><button class="dark-mode-button dark-mode-on" id=dark-mode-disable-button><img alt="Dark mode" aria-label="dark mode toggle" title="Dark mode" height=24 src=https://www.mattnewcomer.org/dark_mode.svg width=24></button><button class="dark-mode-button dark-mode-off" id=dark-mode-enable-button><img alt="Light mode" aria-label="light mode toggle" title="Light mode" height=24 src=https://www.mattnewcomer.org/light_mode.svg width=24></button></div><script>const cls = document.body.classList;
+        const getSessionTheme = sessionStorage.getItem("theme");
+        if (getSessionTheme === "dark") {
+            cls.toggle("dark-mode", true);
+        } else if (getSessionTheme === "light") {
+            cls.toggle("dark-mode", false);
+        } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            cls.toggle("dark-mode", true);
+        }
+
+        document.getElementById("dark-mode-disable-button").addEventListener("click", function(e) {
+            cls.toggle("dark-mode", true);
+            sessionStorage.setItem("theme", "dark");
+        });
+        document.getElementById("dark-mode-enable-button").addEventListener("click", function(e) {
+            cls.toggle("dark-mode", false);
+            sessionStorage.setItem("theme", "light");
+        });</script><noscript><style>.dark-mode-buttons {
+                display: none;
+            }</style></noscript>
