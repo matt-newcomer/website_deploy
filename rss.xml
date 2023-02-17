@@ -52,13 +52,13 @@
     
         &lt;img class = &quot;dark-mode-on&quot; 
         src=&quot;design_rev1.png&quot;
-        alt=&quot;Sources and sinks of audio information across the system&quot;
+        alt=&quot;Sources and sinks of audio information across the system with two fewer switches&quot;
         width=&quot;400&quot;
         
         &#x2F;&gt;
     &lt;img class = &quot;dark-mode-off&quot; 
         src=&quot;design_rev1_dark.png&quot;
-        alt=&quot;Sources and sinks of audio information across the system&quot;
+        alt=&quot;Sources and sinks of audio information across the system with two fewer switches&quot;
         width=&quot;400&quot;
         
         &#x2F;&gt;
@@ -79,13 +79,13 @@
     
         &lt;img class = &quot;dark-mode-on&quot; 
         src=&quot;design_rev2.png&quot;
-        alt=&quot;Sources and sinks of audio information across the system&quot;
+        alt=&quot;The fully detailed diagram of hardware and links between boxes&quot;
         width=&quot;800&quot;
         
         &#x2F;&gt;
     &lt;img class = &quot;dark-mode-off&quot; 
         src=&quot;design_rev2_dark.png&quot;
-        alt=&quot;Sources and sinks of audio information across the system&quot;
+        alt=&quot;The fully detailed diagram of hardware and links between boxes&quot;
         width=&quot;800&quot;
         
         &#x2F;&gt;
@@ -105,13 +105,13 @@
     
         &lt;img class = &quot;dark-mode-on&quot; 
         src=&quot;song_data_flow.png&quot;
-        alt=&quot;Sources and sinks of audio information across the system&quot;
+        alt=&quot;A UML sequence diagram showing the flow of network data to play a song&quot;
         width=&quot;600&quot;
         
         &#x2F;&gt;
     &lt;img class = &quot;dark-mode-off&quot; 
         src=&quot;song_data_flow_dark.png&quot;
-        alt=&quot;Sources and sinks of audio information across the system&quot;
+        alt=&quot;A UML sequence diagram showing the flow of network data to play a song&quot;
         width=&quot;600&quot;
         
         &#x2F;&gt;
