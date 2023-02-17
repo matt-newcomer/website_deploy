@@ -36,6 +36,8 @@ function date_difference_to_string(deltaSeconds) {
 }
 
 function timerLoop() {
+    setTimeout(timerLoop, 1000);
+
     let date = new Date();
     let seconds = Math.round(date.getTime() / 1000);
     let seconds_left = (MAX_SAFE_SECONDS - seconds);
@@ -44,8 +46,6 @@ function timerLoop() {
     swap_contents(UNIX_SECONDS_LEFT, seconds_left_str);
     swap_contents(BINARY_CURRENT_TIME, seconds_to_twos_complement_string(seconds))
     swap_contents(TIME_LEFT_DIFF, date_difference_to_string(seconds_left))
-
-    setTimeout(timerLoop, 1000);
 }
 
 timerLoop();

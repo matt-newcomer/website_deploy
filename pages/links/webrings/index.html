@@ -1,7 +1,7 @@
 <!doctype html><html lang=en><head><meta charset=utf-8><meta content="width=device-width,initial-scale=1" name=viewport><meta name=description><title>mattn | Webrings</title><style>html {
             visibility: hidden;
             opacity: 0;
-        }</style><link href=https://www.mattnewcomer.org/style.css rel=stylesheet><link href=https://www.mattnewcomer.org/katex.css rel=stylesheet><body><header class=space><a href=https://www.mattnewcomer.org>← Home</a></header><main><h1>Webrings</h1><div class=space></div><p>You just can’t kill the 90’s. Don’t bother trying.<ul><li><a href=https://hotlinewebring.club/ rel=noreferrer>Hotline</a><li><a href=https://webringdemo.netlify.app/ rel=noreferrer>Nerds of the 90s</a><li><a href=https://webring.recurse.com/ rel=noreferrer>recurse</a><li><a href=https://webring.dinhe.net/ rel=noreferrer>retronaut</a><li><a href=https://sidebar.io/webring rel=noreferrer>Sidebar</a><li><a href=https://webring.xxiivv.com/ rel=noreferrer>xxiivv</a><li><a href=https://yesterweb.org/webring/ rel=noreferrer>yesterweb</a></ul></main><div class=dark-mode-buttons><button class=dark-mode-button id=dark-mode-on><img alt="Dark mode" aria-label="dark mode toggle" title="Dark mode" height=24 src=https://www.mattnewcomer.org/dark_mode.svg width=24></button><button class=dark-mode-button id=dark-mode-off><img alt="Light mode" aria-label="light mode toggle" title="Light mode" height=24 src=https://www.mattnewcomer.org/light_mode.svg width=24></button></div><script>const cls = document.body.classList;
+        }</style><link href=https://www.mattnewcomer.org/style.css rel=stylesheet><link href=https://www.mattnewcomer.org/katex.css rel=stylesheet><body><header class=space><a href=https://www.mattnewcomer.org>← Home</a></header><main><h1>Webrings</h1><div class=space></div><p>You just can’t kill the 90’s. Don’t bother trying.<ul><li><a href=https://hotlinewebring.club/ rel=noreferrer>Hotline</a><li><a href=https://webringdemo.netlify.app/ rel=noreferrer>Nerds of the 90s</a><li><a href=https://webring.recurse.com/ rel=noreferrer>recurse</a><li><a href=https://webring.dinhe.net/ rel=noreferrer>retronaut</a><li><a href=https://sidebar.io/webring rel=noreferrer>Sidebar</a><li><a href=https://webring.xxiivv.com/ rel=noreferrer>xxiivv</a><li><a href=https://yesterweb.org/webring/ rel=noreferrer>yesterweb</a></ul></main><div class=dark-mode-buttons><button class="dark-mode-button dark-mode-on" id=dark-mode-disable-button><img alt="Dark mode" aria-label="dark mode toggle" title="Dark mode" height=24 src=https://www.mattnewcomer.org/dark_mode.svg width=24></button><button class="dark-mode-button dark-mode-off" id=dark-mode-enable-button><img alt="Light mode" aria-label="light mode toggle" title="Light mode" height=24 src=https://www.mattnewcomer.org/light_mode.svg width=24></button></div><script>const cls = document.body.classList;
         const getSessionTheme = sessionStorage.getItem("theme");
         if (getSessionTheme === "dark") {
             cls.toggle("dark-mode", true);
@@ -11,11 +11,11 @@
             cls.toggle("dark-mode", true);
         }
 
-        document.getElementById("dark-mode-on").addEventListener("click", function(e) {
+        document.getElementById("dark-mode-disable-button").addEventListener("click", function(e) {
             cls.toggle("dark-mode", true);
             sessionStorage.setItem("theme", "dark");
         });
-        document.getElementById("dark-mode-off").addEventListener("click", function(e) {
+        document.getElementById("dark-mode-enable-button").addEventListener("click", function(e) {
             cls.toggle("dark-mode", false);
             sessionStorage.setItem("theme", "light");
         });</script><noscript><style>.dark-mode-buttons {
