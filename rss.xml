@@ -7,7 +7,52 @@
         <generator>Zola</generator>
         <language>en</language>
         <atom:link href="https://www.mattnewcomer.org/rss.xml" rel="self" type="application/rss+xml"/>
-        <lastBuildDate>Thu, 16 Feb 2023 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Sun, 19 Feb 2023 00:00:00 +0000</lastBuildDate>
+        <item>
+            <title>Joe Pera Talks With You</title>
+            <pubDate>Sun, 19 Feb 2023 00:00:00 +0000</pubDate>
+            <link>https://www.mattnewcomer.org/blog/2023-02-19-01/</link>
+            <guid>https://www.mattnewcomer.org/blog/2023-02-19-01/</guid>
+            <description>&lt;p&gt;I believe &lt;em&gt;Joe Pera Talks With You&lt;&#x2F;em&gt; is a once-in-a-generation masterpiece of a show. &lt;&#x2F;p&gt;
+&lt;p&gt;If you’ve never seen Joe before, here’s a sample of his “comedy”:&lt;&#x2F;p&gt;
+&lt;div class=youtube&gt;
+    &lt;iframe
+        src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;dH2JIwGxE08&quot;
+        webkitallowfullscreen
+        mozallowfullscreen
+        allowfullscreen&gt;
+    &lt;&#x2F;iframe&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;In a world that is more confusing by the day, watching a guy in his 30’s just revel in childlike wonder about everything he interacts with is incredible. Joe falls in love, deals with grief, and lives is life with complete sincerity. He speaks with such warmth and understanding. Joe, or at least the character he portrays, is who we should strive to be.&lt;&#x2F;p&gt;
+&lt;p&gt;Here’s another scene, this time featuring Connor O’Malley:&lt;&#x2F;p&gt;
+&lt;div class=youtube&gt;
+    &lt;iframe
+        src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;j9-w0-zzNV4&quot;
+        webkitallowfullscreen
+        mozallowfullscreen
+        allowfullscreen&gt;
+    &lt;&#x2F;iframe&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;Not only are these bits funny, but they’re relaxing and convincingly real. It’s as if we crossed into post irony, only for the most sincere of interactions to pierce through the facade.&lt;&#x2F;p&gt;
+&lt;p&gt;That’s all to say that I think the show hits something on its contemporaries haven’t found: constructive, wholesome comedy. I can’t believe that a middle school choir teacher living in the Upper Peninsula helped create the next comedic frontier.&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>Quick Sketch</title>
+            <pubDate>Sun, 19 Feb 2023 00:00:00 +0000</pubDate>
+            <link>https://www.mattnewcomer.org/blog/2023-02-19-02/</link>
+            <guid>https://www.mattnewcomer.org/blog/2023-02-19-02/</guid>
+            <description>&lt;figure &gt;
+    
+    &lt;img src=&quot;box.jpg&quot;
+        alt=&quot;A stylized Grado headphone box.&quot;
+        width=&quot;400&quot;
+        
+        &#x2F;&gt;
+    
+    
+&lt;&#x2F;figure&gt;</description>
+        </item>
         <item>
             <title>Audio System</title>
             <pubDate>Thu, 16 Feb 2023 00:00:00 +0000</pubDate>
@@ -39,7 +84,7 @@
         
         &#x2F;&gt;
     
-    &lt;figcaption&gt;Audio data flows along the arrows&lt;&#x2F;figcaption&gt;
+    &lt;figcaption&gt;The original design&lt;&#x2F;figcaption&gt;
 &lt;&#x2F;figure&gt;
 &lt;p&gt;Some other requirements also shaped what middle boxes I would need between the sources and sinks:&lt;&#x2F;p&gt;
 &lt;ul&gt;
