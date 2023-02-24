@@ -1,0 +1,57 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta content="width=device-width,initial-scale=1" name=viewport><meta name=description><title>mattn | KaTeX Demonstration</title><style>html {
+            visibility: hidden;
+            opacity: 0;
+        }</style><link href=https://www.mattnewcomer.org/style.css rel=stylesheet><link href=https://www.mattnewcomer.org/katex.css rel=stylesheet><body><header class=space><a href=https://www.mattnewcomer.org>← Home</a></header><main><h1>KaTeX Demonstration</h1><p class=secondary>6 February 2023 (updated 8 February 2023)<div class=space></div><p>Because Zola doesn’t support KaTeX out of the box, I ended up writing a JavaScript program to compile and inject it into the DOM before serializing into HTML. Please, enjoy the meta compilation madness.</p><span class=math-display-block data-display=display> TD_{1}(L_{16} \parallel R_{16}) = L_{15} \oplus F(k_{16}, R_{15}) \parallel R_{16} \oplus F(k_{16}, L_{15} \oplus F(k_{16}, R_{15})) </span><ul><li><span class=math-display-block> \omega ' = \omega _0 \sqrt {1 - \left( {\frac{b}{{2m\omega _0 }}} \right)^2 } = \omega _0 \sqrt {1 - \frac{1}{{4Q^2 }}} </span><li><span class=math-display-block> R = \frac{{2GM}}{{c^2 }} </span><li><span class=math-display-block> e^{\pi i} + 1 = 0= \cos(\pi) + i \sin(\pi) </span><li><span class=math-display-block> \int {\tan (ax)} dx = - \frac{1}{a}\ln \left| {\cos (ax)} \right| + c </span></ul><p>For those interested, here is the JavaScript that powers the KaTeX generation and DOM injection. <a href=https://kosalab.dev rel=noreferrer>Kieran</a> helped me resolve the infinite recursion problem that resulted from using <code>getElementsByClassName()</code>. Many thanks!<pre class=language-js data-lang=js data-linenos style=background-color:#282828;color:#fdf4c1aa;><code class=language-js data-lang=js><table><tbody><tr><td>1<td><span style=color:#fa5c4b;>const </span><span style=color:#fdf4c1;>fs </span><span style=color:#fe8019;>= </span><span style=color:#fabd2f;>require</span><span>(</span><span style=color:#b8bb26;>'fs'</span><span>);
+</span><tr><td>2<td><span style=color:#fa5c4b;>const </span><span style=color:#fdf4c1;>katex </span><span style=color:#fe8019;>= </span><span style=color:#fabd2f;>require</span><span>(</span><span style=color:#b8bb26;>'katex'</span><span>);
+</span><tr><td>3<td><span style=color:#fa5c4b;>const </span><span style=color:#fdf4c1;>jsdom </span><span style=color:#fe8019;>= </span><span style=color:#fabd2f;>require</span><span>(</span><span style=color:#b8bb26;>"jsdom"</span><span>);
+</span><tr><td>4<td><span style=color:#fa5c4b;>const </span><span>{ </span><span style=color:#fdf4c1;>JSDOM </span><span>} </span><span style=color:#fe8019;>= </span><span style=color:#fdf4c1;>jsdom</span><span>;
+</span><tr><td>5<td><span>
+</span><tr><td>6<td><span style=font-style:italic;color:#928374;>// The first argument is the input html file, and the optional second argument is the output file
+</span><tr><td>7<td><span style=color:#fa5c4b;>let </span><span style=color:#fdf4c1;>in_filename </span><span style=color:#fe8019;>= </span><span style=color:#fabd2f;>process</span><span>.</span><span style=color:#fabd2f;>argv</span><span>[</span><span style=color:#d3869b;>2</span><span>]
+</span><tr><td>8<td><span style=color:#fa5c4b;>let </span><span style=color:#fdf4c1;>out_filename </span><span style=color:#fe8019;>= </span><span style=color:#fabd2f;>process</span><span>.</span><span style=color:#fabd2f;>argv</span><span>.</span><span style=color:#fabd2f;>length </span><span style=color:#fe8019;>== </span><span style=color:#d3869b;>4 </span><span style=color:#fe8019;>? </span><span style=color:#fabd2f;>process</span><span>.</span><span style=color:#fabd2f;>argv</span><span>[</span><span style=color:#d3869b;>3</span><span>] </span><span style=color:#fe8019;>: </span><span style=color:#fdf4c1;>in_filename</span><span>;
+</span><tr><td>9<td><span>
+</span><tr><td>10<td><span style=font-style:italic;color:#928374;>// Pull the DOM from the HTML file
+</span><tr><td>11<td><span style=color:#fdf4c1;>JSDOM.</span><span style=color:#8ec07c;>fromFile</span><span>(</span><span style=color:#fdf4c1;>in_filename</span><span>)</span><span style=color:#fdf4c1;>.</span><span style=color:#fabd2f;>then</span><span>(</span><span style=color:#fdf4c1;>dom </span><span style=color:#fa5c4b;>=> </span><span>{
+</span><tr><td>12<td><span>    </span><span style=font-style:italic;color:#928374;>/*
+</span><tr><td>13<td><span style=font-style:italic;color:#928374;>     *  Select all divs with the math-display-block class
+</span><tr><td>14<td><span style=font-style:italic;color:#928374;>     *
+</span><tr><td>15<td><span style=font-style:italic;color:#928374;>     *  Using querySelectorAll instead of getElementsByClassName prevents infinite recursion 
+</span><tr><td>16<td><span style=font-style:italic;color:#928374;>     *  from occurring because the latter's return value updates when the DOM is changed. 
+</span><tr><td>17<td><span style=font-style:italic;color:#928374;>     *  This creates a situation where KaTeX adds KaTeX elements which are then passed to KaTeX...
+</span><tr><td>18<td><span style=font-style:italic;color:#928374;>     */
+</span><tr><td>19<td><span>    </span><span style=color:#fa5c4b;>let </span><span style=color:#fdf4c1;>equations </span><span style=color:#fe8019;>= </span><span style=color:#fdf4c1;>dom.window.document.</span><span style=color:#fabd2f;>querySelectorAll</span><span>(</span><span style=color:#b8bb26;>"div.math-display-block"</span><span>);
+</span><tr><td>20<td><span>
+</span><tr><td>21<td><span>    </span><span style=color:#fa5c4b;>for </span><span>(</span><span style=color:#fa5c4b;>let </span><span style=color:#fdf4c1;>i </span><span style=color:#fe8019;>= </span><span style=color:#d3869b;>0</span><span>; </span><span style=color:#fdf4c1;>i </span><span style=color:#fe8019;>< </span><span style=color:#fdf4c1;>equations</span><span>.</span><span style=color:#fabd2f;>length</span><span>; </span><span style=color:#fdf4c1;>i</span><span style=color:#fe8019;>++</span><span>) {
+</span><tr><td>22<td><span>        </span><span style=font-style:italic;color:#928374;>// Get the text (KaTeX) of the div
+</span><tr><td>23<td><span>        </span><span style=color:#fa5c4b;>let </span><span style=color:#fdf4c1;>equation </span><span style=color:#fe8019;>= </span><span style=color:#fdf4c1;>equations</span><span>[</span><span style=color:#fdf4c1;>i</span><span>]
+</span><tr><td>24<td><span>        </span><span style=font-style:italic;color:#928374;>// Compile it to a string, rendering as a block if specified
+</span><tr><td>25<td><span>        </span><span style=color:#fa5c4b;>let </span><span style=color:#fdf4c1;>html </span><span style=color:#fe8019;>= </span><span style=color:#fdf4c1;>katex.</span><span style=color:#8ec07c;>renderToString</span><span>(</span><span style=color:#fdf4c1;>equation</span><span>.</span><span style=color:#fdf4c1;>textContent</span><span>, {
+</span><tr><td>26<td><span>            throwOnError: </span><span style=color:#d3869b;>true</span><span>,
+</span><tr><td>27<td><span>            displayMode: </span><span style=color:#fdf4c1;>equation.</span><span style=color:#fabd2f;>getAttribute</span><span>(</span><span style=color:#b8bb26;>'data-display'</span><span>) </span><span style=color:#fe8019;>=== </span><span style=color:#b8bb26;>"display"</span><span>,
+</span><tr><td>28<td><span>        });
+</span><tr><td>29<td><span>        </span><span style=font-style:italic;color:#928374;>// Write the HTML back into the div
+</span><tr><td>30<td><span>        </span><span style=color:#fdf4c1;>equation</span><span>.</span><span style=color:#fdf4c1;>innerHTML </span><span style=color:#fe8019;>= </span><span style=color:#fdf4c1;>html
+</span><tr><td>31<td><span>    }
+</span><tr><td>32<td><span>    </span><span style=font-style:italic;color:#928374;>// Serialize the updated dom and write back to the file
+</span><tr><td>33<td><span>    </span><span style=color:#fdf4c1;>fs.</span><span style=color:#8ec07c;>writeFileSync</span><span>(</span><span style=color:#fdf4c1;>out_filename</span><span>, </span><span style=color:#fdf4c1;>dom.</span><span style=color:#8ec07c;>serialize</span><span>());
+</span><tr><td>34<td><span>});
+</span></table></code></pre><p>This code is available in full on <a href=https://github.com/matt-newcomer/katex_injector rel=noreferrer>GitHub</a>.</main><div class=dark-mode-buttons><button class="dark-mode-button dark-mode-hide" id=dark-mode-disable-button><img alt="Dark mode" aria-label="dark mode toggle" title="Dark mode" height=24 src=https://www.mattnewcomer.org/dark_mode.svg width=24></button><button class="dark-mode-button dark-mode-show" id=dark-mode-enable-button><img alt="Light mode" aria-label="light mode toggle" title="Light mode" height=24 src=https://www.mattnewcomer.org/light_mode.svg width=24></button></div><script>const cls = document.body.classList;
+        const getSessionTheme = sessionStorage.getItem("theme");
+        if (getSessionTheme === "dark") {
+            cls.toggle("dark-mode", true);
+        } else if (getSessionTheme === "light") {
+            cls.toggle("dark-mode", false);
+        } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            cls.toggle("dark-mode", true);
+        }
+
+        document.getElementById("dark-mode-disable-button").addEventListener("click", function(e) {
+            cls.toggle("dark-mode", true);
+            sessionStorage.setItem("theme", "dark");
+        });
+        document.getElementById("dark-mode-enable-button").addEventListener("click", function(e) {
+            cls.toggle("dark-mode", false);
+            sessionStorage.setItem("theme", "light");
+        });</script><noscript><style>.dark-mode-buttons {
+                display: none;
+            }</style></noscript>
