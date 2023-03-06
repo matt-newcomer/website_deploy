@@ -2,18 +2,19 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
       <title>mattn</title>
-        <link>https://www.mattnewcomer.org</link>
-        <description></description>
-        <generator>Zola</generator>
-        <language>en</language>
-        <atom:link href="https://www.mattnewcomer.org/rss.xml" rel="self" type="application/rss+xml"/>
-        <lastBuildDate>Sat, 25 Feb 2023 00:00:00 +0000</lastBuildDate>
-        <item>
-            <title>Writing as a Weapon</title>
-            <pubDate>Fri, 24 Feb 2023 00:00:00 +0000</pubDate>
-            <link>https://www.mattnewcomer.org/blog/2023-02-24-01/</link>
-            <guid>https://www.mattnewcomer.org/blog/2023-02-24-01/</guid>
-            <description>&lt;p&gt;As the world’s third most influential website behind only &lt;em&gt;The Onion&lt;&#x2F;em&gt; and &lt;em&gt;Hacker News&lt;&#x2F;em&gt;, this publication aims to achieve complete, authoritarian control over the State of Wyoming using journalistic might and persuasive cat gifs alone.&lt;&#x2F;p&gt;
+      <link>https://www.mattnewcomer.org</link>
+      <description></description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://www.mattnewcomer.org/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Sat, 25 Feb 2023 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Writing as a Weapon</title>
+          <pubDate>Fri, 24 Feb 2023 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://www.mattnewcomer.org/blog/2023-02-24-01/</link>
+          <guid>https://www.mattnewcomer.org/blog/2023-02-24-01/</guid>
+          <description>&lt;p&gt;As the world’s third most influential website behind only &lt;em&gt;The Onion&lt;&#x2F;em&gt; and &lt;em&gt;Hacker News&lt;&#x2F;em&gt;, this publication aims to achieve complete, authoritarian control over the State of Wyoming using journalistic might and persuasive cat gifs alone.&lt;&#x2F;p&gt;
 &lt;p&gt;Although many of our readers confidently assert that there is a void where Wyoming is on a map, &lt;em&gt;&lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;www.wyo.gov&#x2F;&quot;&gt;mattnewcomer.org&lt;&#x2F;a&gt;&lt;&#x2F;em&gt; has independently verified that, yes, there is land there. Although the space called Wyoming has an elected government and is under the jurisdiction of the United States Federal Government, we propose that the state says “it’s all good” and dissolves itself into a legal gray area.&lt;&#x2F;p&gt;
 &lt;p&gt;Our motive behind acquiring the 97,914 square miles is simple: to create a safe space where satirists can mock authority without fear of being arrested over hurt feelings and rash judgments. &lt;&#x2F;p&gt;
 &lt;p&gt;Critics of &lt;em&gt;mattnewcomer.org&lt;&#x2F;em&gt; fear that handing over territory to a private entity creates a dangerous precedent wherein parts of the country are just given away, manifest destiny style. To these critics, we respond that manifest destiny never ended, and ownership is completely made up by people as a means of control. &lt;&#x2F;p&gt;
@@ -23,13 +24,14 @@
 &lt;p&gt;The impetus for writing this piece was the Supreme Court’s denial of Anthony Novak’s petition to sue two police officers in the city of Parma, Ohio. His entire case is documented &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;ij.org&#x2F;case&#x2F;novak-v-parma&#x2F;#&quot;&gt;here&lt;&#x2F;a&gt; by his legal team.&lt;&#x2F;p&gt;
 &lt;p&gt;In response to the absurdity that is arresting someone for satire, &lt;em&gt;The Onion&lt;&#x2F;em&gt; wrote &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;www.supremecourt.gov&#x2F;DocketPDF&#x2F;22&#x2F;22-293&#x2F;242292&#x2F;20221003125252896_35295545_1-22.10.03%20-%20Novak-Parma%20-%20Onion%20Amicus%20Brief.pdf&quot;&gt;this masterpiece&lt;&#x2F;a&gt; of an Amicus brief. Why not make a point inside of a point while poking fun at the Supreme Court if you have the chance?&lt;&#x2F;p&gt;
 </description>
-        </item>
-        <item>
-            <title>Joe Pera Talks With You</title>
-            <pubDate>Sun, 19 Feb 2023 00:00:00 +0000</pubDate>
-            <link>https://www.mattnewcomer.org/blog/2023-02-19-01/</link>
-            <guid>https://www.mattnewcomer.org/blog/2023-02-19-01/</guid>
-            <description>&lt;p&gt;I believe &lt;em&gt;Joe Pera Talks With You&lt;&#x2F;em&gt; is a once-in-a-generation masterpiece of a show. &lt;&#x2F;p&gt;
+      </item>
+      <item>
+          <title>Joe Pera Talks With You</title>
+          <pubDate>Sun, 19 Feb 2023 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://www.mattnewcomer.org/blog/2023-02-19-01/</link>
+          <guid>https://www.mattnewcomer.org/blog/2023-02-19-01/</guid>
+          <description>&lt;p&gt;I believe &lt;em&gt;Joe Pera Talks With You&lt;&#x2F;em&gt; is a once-in-a-generation masterpiece of a show. &lt;&#x2F;p&gt;
 &lt;p&gt;If you’ve never seen Joe before, here’s a sample of his “comedy”:&lt;&#x2F;p&gt;
 &lt;div class=youtube&gt;
     &lt;iframe
@@ -52,13 +54,14 @@
 &lt;p&gt;Not only are these bits funny, but they’re relaxing and convincingly real. It’s as if we crossed into post irony, only for the most sincere of interactions to pierce through the facade.&lt;&#x2F;p&gt;
 &lt;p&gt;That’s all to say that I think the show hits something on its contemporaries haven’t found: constructive, wholesome comedy. I can’t believe that a middle school choir teacher living in the Upper Peninsula helped create the next comedic frontier.&lt;&#x2F;p&gt;
 </description>
-        </item>
-        <item>
-            <title>Quick Sketch</title>
-            <pubDate>Sun, 19 Feb 2023 00:00:00 +0000</pubDate>
-            <link>https://www.mattnewcomer.org/blog/2023-02-19-02/</link>
-            <guid>https://www.mattnewcomer.org/blog/2023-02-19-02/</guid>
-            <description>&lt;figure &gt;
+      </item>
+      <item>
+          <title>Quick Sketch</title>
+          <pubDate>Sun, 19 Feb 2023 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://www.mattnewcomer.org/blog/2023-02-19-02/</link>
+          <guid>https://www.mattnewcomer.org/blog/2023-02-19-02/</guid>
+          <description>&lt;figure &gt;
     
     &lt;img src=&quot;box.jpg&quot;
         alt=&quot;A stylized Grado headphone box.&quot;
@@ -68,13 +71,14 @@
     
     
 &lt;&#x2F;figure&gt;</description>
-        </item>
-        <item>
-            <title>Audio System</title>
-            <pubDate>Thu, 16 Feb 2023 00:00:00 +0000</pubDate>
-            <link>https://www.mattnewcomer.org/blog/2023-02-16-01/</link>
-            <guid>https://www.mattnewcomer.org/blog/2023-02-16-01/</guid>
-            <description>&lt;p&gt;Recently I became a bit of a stereo-head.&lt;&#x2F;p&gt;
+      </item>
+      <item>
+          <title>Audio System</title>
+          <pubDate>Thu, 16 Feb 2023 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://www.mattnewcomer.org/blog/2023-02-16-01/</link>
+          <guid>https://www.mattnewcomer.org/blog/2023-02-16-01/</guid>
+          <description>&lt;p&gt;Recently I became a bit of a stereo-head.&lt;&#x2F;p&gt;
 &lt;p&gt;When I got my first &lt;a href=&quot;https:&#x2F;&#x2F;www.mattnewcomer.org&#x2F;blog&#x2F;2023-01-17-01&#x2F;&quot;&gt;real pair of headphones&lt;&#x2F;a&gt;, I was blown away by what they could do. I mean, I was listening to them out of my &lt;a href=&quot;https:&#x2F;&#x2F;www.mattnewcomer.org&#x2F;blog&#x2F;2022-12-13-01&#x2F;&quot;&gt;nugget of a cell phone&lt;&#x2F;a&gt; where I could hear an audible hum if I lowered the volume too much. Instead of taking the next reasonable step of getting a little portable DAC and getting on with my life, I decided to build a little home audio setup.&lt;&#x2F;p&gt;
 &lt;p&gt;I’d like to show you what I ended up building.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;high-level-goals&quot;&gt;High Level Goals&lt;&#x2F;h2&gt;
@@ -184,13 +188,14 @@
 &lt;p&gt;To my untrained ear? Phenomenal. &lt;&#x2F;p&gt;
 &lt;p&gt;The best part is that there’s no weird hacky fixes, just plug in headphones, select a track, and enjoy.&lt;&#x2F;p&gt;
 </description>
-        </item>
-        <item>
-            <title>32-bit Counters Beware</title>
-            <pubDate>Sun, 12 Feb 2023 00:00:00 +0000</pubDate>
-            <link>https://www.mattnewcomer.org/blog/2023-02-12-01/</link>
-            <guid>https://www.mattnewcomer.org/blog/2023-02-12-01/</guid>
-            <description>&lt;p&gt;&lt;noscript&gt;This page won’t display any updating dates or times with JavaScript disabled. Sorry!&lt;&#x2F;noscript&gt;&lt;&#x2F;p&gt;
+      </item>
+      <item>
+          <title>32-bit Counters Beware</title>
+          <pubDate>Sun, 12 Feb 2023 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://www.mattnewcomer.org/blog/2023-02-12-01/</link>
+          <guid>https://www.mattnewcomer.org/blog/2023-02-12-01/</guid>
+          <description>&lt;p&gt;&lt;noscript&gt;This page won’t display any updating dates or times with JavaScript disabled. Sorry!&lt;&#x2F;noscript&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;I regret to inform you that some computers might have a bad time in a little while. Specifically, on&lt;&#x2F;p&gt;
 &lt;div class = &quot;clock_text&quot;&gt;Tue, 19 January 2038 03:14:07 GMT&lt;&#x2F;div&gt;
 &lt;p&gt;systems that store &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Unix_time&quot;&gt;Unix time&lt;&#x2F;a&gt;stamps in 32-bit &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Two%27s_complement&quot;&gt;two’s complement&lt;&#x2F;a&gt; representation will… run out of time. Right now, the current time is represented as &lt;&#x2F;p&gt;
@@ -208,13 +213,14 @@ type=&quot;application&#x2F;javascript&quot;
 referrerpolicy=&quot;no-referrer&quot; 
 &gt;&lt;&#x2F;script&gt;&lt;&#x2F;p&gt;
 </description>
-        </item>
-        <item>
-            <title>KaTeX Demonstration</title>
-            <pubDate>Mon, 06 Feb 2023 00:00:00 +0000</pubDate>
-            <link>https://www.mattnewcomer.org/blog/2023-02-06-01/</link>
-            <guid>https://www.mattnewcomer.org/blog/2023-02-06-01/</guid>
-            <description>&lt;p&gt;Because Zola doesn’t support KaTeX out of the box, I ended up writing a JavaScript program to compile and inject it into the DOM before serializing into HTML. Please, enjoy the meta compilation madness.&lt;&#x2F;p&gt;
+      </item>
+      <item>
+          <title>KaTeX Demonstration</title>
+          <pubDate>Mon, 06 Feb 2023 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://www.mattnewcomer.org/blog/2023-02-06-01/</link>
+          <guid>https://www.mattnewcomer.org/blog/2023-02-06-01/</guid>
+          <description>&lt;p&gt;Because Zola doesn’t support KaTeX out of the box, I ended up writing a JavaScript program to compile and inject it into the DOM before serializing into HTML. Please, enjoy the meta compilation madness.&lt;&#x2F;p&gt;
 &lt;span 
 data-display=&quot;display&quot; 
 class=&quot;math-display-block&quot;&gt;
@@ -280,26 +286,28 @@ class=&quot;math-display-block&quot;&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;This code is available in full on &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;matt-newcomer&#x2F;katex_injector&quot;&gt;GitHub&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </description>
-        </item>
-        <item>
-            <title>.org Domains</title>
-            <pubDate>Fri, 03 Feb 2023 00:00:00 +0000</pubDate>
-            <link>https://www.mattnewcomer.org/blog/2023-02-03-01/</link>
-            <guid>https://www.mattnewcomer.org/blog/2023-02-03-01/</guid>
-            <description>&lt;p&gt;One perennial question people ask me when they first visit this site is why does it have a .org top level domain? &lt;&#x2F;p&gt;
+      </item>
+      <item>
+          <title>.org Domains</title>
+          <pubDate>Fri, 03 Feb 2023 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://www.mattnewcomer.org/blog/2023-02-03-01/</link>
+          <guid>https://www.mattnewcomer.org/blog/2023-02-03-01/</guid>
+          <description>&lt;p&gt;One perennial question people ask me when they first visit this site is why does it have a .org top level domain? &lt;&#x2F;p&gt;
 &lt;p&gt;Choosing a TLD is a little more involved than just choosing cool looking words. Someone has to run the DNS servers to route requests to the server that this site is hosted on. Picking a TLD is like choosing a partner to handle some of your backend logistics. &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;thehackerblog.com&#x2F;the-io-error-taking-control-of-all-io-domains-with-a-targeted-registration&#x2F;&quot;&gt;.io domains&lt;&#x2F;a&gt; are somewhat infamous for poor uptime and registration services, but they’re super cheap. Internet forums have a horror story pop up every few weeks with bad domain registrars. There’s a balance to be had between registration price and service quality, and .org is &lt;em&gt;good enough&lt;&#x2F;em&gt; for me.&lt;&#x2F;p&gt;
 &lt;p&gt;That’s not to say .org &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;.org#History&quot;&gt;has been perfect&lt;&#x2F;a&gt;. &lt;&#x2F;p&gt;
 &lt;p&gt;.org was one of the &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;www.rfc-editor.org&#x2F;rfc&#x2F;rfc920.txt&quot;&gt;original TLDs registered in 1985&lt;&#x2F;a&gt;. As it pertains to the world wide web, .org is &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;www.rfc-editor.org&#x2F;rfc&#x2F;rfc1591.txt&quot;&gt;intended as the miscellaneous TLD&lt;&#x2F;a&gt; for organizations that don’t fit anywhere else. That’s me!&lt;&#x2F;p&gt;
 &lt;p&gt;Also, because I can. Why have some fancy .cloud or .tech when I can own a certified dad domain?&lt;&#x2F;p&gt;
 &lt;p&gt;I wonder how long I can hold onto this domain… I doubt there are VC firms eyeing it. &lt;&#x2F;p&gt;
 </description>
-        </item>
-        <item>
-            <title>Embedding for Fun</title>
-            <pubDate>Wed, 01 Feb 2023 00:00:00 +0000</pubDate>
-            <link>https://www.mattnewcomer.org/blog/2023-02-01-01/</link>
-            <guid>https://www.mattnewcomer.org/blog/2023-02-01-01/</guid>
-            <description>&lt;p&gt;In this week’s experiment, I added YouTube video support. Please forgive me for what have I done.&lt;&#x2F;p&gt;
+      </item>
+      <item>
+          <title>Embedding for Fun</title>
+          <pubDate>Wed, 01 Feb 2023 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://www.mattnewcomer.org/blog/2023-02-01-01/</link>
+          <guid>https://www.mattnewcomer.org/blog/2023-02-01-01/</guid>
+          <description>&lt;p&gt;In this week’s experiment, I added YouTube video support. Please forgive me for what have I done.&lt;&#x2F;p&gt;
 &lt;p&gt;Please enjoy this video that &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;djskytlz.com&#x2F;&quot;&gt;Jack&lt;&#x2F;a&gt; sent me.&lt;&#x2F;p&gt;
 &lt;div class=youtube&gt;
     &lt;iframe
@@ -309,13 +317,14 @@ class=&quot;math-display-block&quot;&gt;
         allowfullscreen&gt;
     &lt;&#x2F;iframe&gt;
 &lt;&#x2F;div&gt;</description>
-        </item>
-        <item>
-            <title>.mp3’s are Incredible, and Streaming Services Suck</title>
-            <pubDate>Fri, 27 Jan 2023 00:00:00 +0000</pubDate>
-            <link>https://www.mattnewcomer.org/blog/2023-01-27-01/</link>
-            <guid>https://www.mattnewcomer.org/blog/2023-01-27-01/</guid>
-            <description>&lt;p&gt;One of my favorite things I own is my music collection. I’m not here to extoll the virtues of music, but I &lt;em&gt;&lt;strong&gt;am&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt; here to tell you why Spotify, Apple Music, and YouTube Music can all kick rocks. &lt;&#x2F;p&gt;
+      </item>
+      <item>
+          <title>.mp3’s are Incredible, and Streaming Services Suck</title>
+          <pubDate>Fri, 27 Jan 2023 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://www.mattnewcomer.org/blog/2023-01-27-01/</link>
+          <guid>https://www.mattnewcomer.org/blog/2023-01-27-01/</guid>
+          <description>&lt;p&gt;One of my favorite things I own is my music collection. I’m not here to extoll the virtues of music, but I &lt;em&gt;&lt;strong&gt;am&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt; here to tell you why Spotify, Apple Music, and YouTube Music can all kick rocks. &lt;&#x2F;p&gt;
 &lt;h2 id=&quot;service-lock-in&quot;&gt;Service Lock-in&lt;&#x2F;h2&gt;
 &lt;p&gt;Over the past few years, I’ve jumped between Apple Music and Spotify to try out of their user interfaces. Switching between the two is a huge pain because you have to manually transfer songs or pay for a service to programmatically do it for you with decidedly ok results. If you don’t want to switch because of a social or operating system tie in, be prepared to weather price increases or hardware lockouts. &lt;&#x2F;p&gt;
 &lt;p&gt;Streaming isn’t anything special, either. Setting up your own streaming box isn’t more than an hour or two of work with a little bit of research. Why pay someone else in perpetuity to do it for you?&lt;&#x2F;p&gt;
@@ -326,13 +335,14 @@ class=&quot;math-display-block&quot;&gt;
 &lt;p&gt;One thing that drove me crazy was Spotify just &lt;em&gt;removing&lt;&#x2F;em&gt; albums I liked inexplicably. I understand the licensing agreements exist, but it really sucks just having music disappear. If I pay someone monthly for something, I think it’s reasonable for it to be there month after month. Unless someone waltzes into my hard disk array and deletes things, it should be there in perpetuity. A win for preserving the arts how I’d like to.&lt;&#x2F;p&gt;
 &lt;p&gt;I feel like there’s a lesson here about ownership in the modern age, and why it’s a right that should be vehemently defended against corporate incursions.&lt;&#x2F;p&gt;
 </description>
-        </item>
-        <item>
-            <title>Social Commentary</title>
-            <pubDate>Tue, 24 Jan 2023 00:00:00 +0000</pubDate>
-            <link>https://www.mattnewcomer.org/blog/2023-01-24-01/</link>
-            <guid>https://www.mattnewcomer.org/blog/2023-01-24-01/</guid>
-            <description>&lt;p&gt;&lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;dictionary.cambridge.org&#x2F;dictionary&#x2F;english&#x2F;dystopia&quot;&gt;dystopia&lt;&#x2F;a&gt; (n.)&lt;&#x2F;p&gt;
+      </item>
+      <item>
+          <title>Social Commentary</title>
+          <pubDate>Tue, 24 Jan 2023 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://www.mattnewcomer.org/blog/2023-01-24-01/</link>
+          <guid>https://www.mattnewcomer.org/blog/2023-01-24-01/</guid>
+          <description>&lt;p&gt;&lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;dictionary.cambridge.org&#x2F;dictionary&#x2F;english&#x2F;dystopia&quot;&gt;dystopia&lt;&#x2F;a&gt; (n.)&lt;&#x2F;p&gt;
 &lt;p&gt;a very bad or unfair society in which there is a lot of suffering, especially an imaginary society in the future, after something terrible has happened; a description of such a society.&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
 &lt;p&gt;&lt;em&gt;The following questions are best pondered alone and with a clear head:&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
@@ -344,13 +354,14 @@ class=&quot;math-display-block&quot;&gt;
 &lt;hr &#x2F;&gt;
 &lt;p&gt;Did you experience your head effortlessly substituting in certain words and phrases? Maybe we didn’t use the same words, but I think you get the point.&lt;&#x2F;p&gt;
 </description>
-        </item>
-        <item>
-            <title>Sony MDR-7506</title>
-            <pubDate>Thu, 19 Jan 2023 00:00:00 +0000</pubDate>
-            <link>https://www.mattnewcomer.org/blog/2023-01-19-01/</link>
-            <guid>https://www.mattnewcomer.org/blog/2023-01-19-01/</guid>
-            <description>&lt;p&gt;I had a lot of fun writing about my &lt;a href=&quot;https:&#x2F;&#x2F;www.mattnewcomer.org&#x2F;blog&#x2F;2023-01-17-01&#x2F;&quot;&gt;Grado’s&lt;&#x2F;a&gt;, so I figured my Sony’s were up next. &lt;&#x2F;p&gt;
+      </item>
+      <item>
+          <title>Sony MDR-7506</title>
+          <pubDate>Thu, 19 Jan 2023 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://www.mattnewcomer.org/blog/2023-01-19-01/</link>
+          <guid>https://www.mattnewcomer.org/blog/2023-01-19-01/</guid>
+          <description>&lt;p&gt;I had a lot of fun writing about my &lt;a href=&quot;https:&#x2F;&#x2F;www.mattnewcomer.org&#x2F;blog&#x2F;2023-01-17-01&#x2F;&quot;&gt;Grado’s&lt;&#x2F;a&gt;, so I figured my Sony’s were up next. &lt;&#x2F;p&gt;
 &lt;figure &gt;
     &lt;a href=7506_right_close_full.JPG&gt;
     &lt;img src=&quot;7506_right_close_mini.JPG&quot;
@@ -409,13 +420,14 @@ class=&quot;math-display-block&quot;&gt;
 &lt;&#x2F;figure&gt;
 &lt;p&gt;Come to think of it, these are almost a perfect foil to the Grado’s. It’s amazing how different the same song can sound through two different pairs of headphones.&lt;&#x2F;p&gt;
 </description>
-        </item>
-        <item>
-            <title>Grado SR80x</title>
-            <pubDate>Tue, 17 Jan 2023 00:00:00 +0000</pubDate>
-            <link>https://www.mattnewcomer.org/blog/2023-01-17-01/</link>
-            <guid>https://www.mattnewcomer.org/blog/2023-01-17-01/</guid>
-            <description>&lt;p&gt;I wanted to take a moment to post my opinions on my Grado SR80x headphones. Over the past few months I’ve gotten into higher-end audio equipment in the hopes of enhancing my music listening experience.&lt;&#x2F;p&gt;
+      </item>
+      <item>
+          <title>Grado SR80x</title>
+          <pubDate>Tue, 17 Jan 2023 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://www.mattnewcomer.org/blog/2023-01-17-01/</link>
+          <guid>https://www.mattnewcomer.org/blog/2023-01-17-01/</guid>
+          <description>&lt;p&gt;I wanted to take a moment to post my opinions on my Grado SR80x headphones. Over the past few months I’ve gotten into higher-end audio equipment in the hopes of enhancing my music listening experience.&lt;&#x2F;p&gt;
 &lt;p&gt;I decided to jump in with a pair of Grado SR80x headphones and they’ve been phenomenal. Don’t let their design or price fool you, these guys pack a punch.&lt;&#x2F;p&gt;
 &lt;figure &gt;
     &lt;a href=SR80x_front_full.JPG&gt;
@@ -458,13 +470,14 @@ class=&quot;math-display-block&quot;&gt;
 &lt;p&gt;The final thing to note is that Grado Labs, the makers of these headphones, are super cool. They’re based in Brooklyn, New York and have been family run for 50+ years. They’re hand built in New York which is something special in the age of globalization. They arrive in a minimalist box with shaped foam to keep them safe in transit. No frills. The box has a thank you note and the headphones themselves.&lt;&#x2F;p&gt;
 &lt;p&gt;The best part is they don’t advertize. Fans (like me) do that for them because they’re just that unique. I didn’t really know what I was getting into with these headphones, but they’re so much fun that it just pulled me deeper into the hobby. &lt;&#x2F;p&gt;
 </description>
-        </item>
-        <item>
-            <title>Scraping Together a Blacksburg Transit Route Map</title>
-            <pubDate>Sat, 14 Jan 2023 00:00:00 +0000</pubDate>
-            <link>https://www.mattnewcomer.org/blog/2023-01-14-01/</link>
-            <guid>https://www.mattnewcomer.org/blog/2023-01-14-01/</guid>
-            <description>&lt;p&gt;The Blacksburg Transit bus system is pretty cool, but it doesn’t produce a map that has all routes on it simultaneously. Why not try to scrape one together?&lt;&#x2F;p&gt;
+      </item>
+      <item>
+          <title>Scraping Together a Blacksburg Transit Route Map</title>
+          <pubDate>Sat, 14 Jan 2023 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://www.mattnewcomer.org/blog/2023-01-14-01/</link>
+          <guid>https://www.mattnewcomer.org/blog/2023-01-14-01/</guid>
+          <description>&lt;p&gt;The Blacksburg Transit bus system is pretty cool, but it doesn’t produce a map that has all routes on it simultaneously. Why not try to scrape one together?&lt;&#x2F;p&gt;
 &lt;p&gt;Step one was to determine how data is displayed on the website. The &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;ridebt.org&quot;&gt;BT Website&lt;&#x2F;a&gt; displays a live map of all routes and buses in operation.&lt;&#x2F;p&gt;
 &lt;p&gt;Opening up the network inspector and reloading the page yielded this stream of requests:&lt;&#x2F;p&gt;
 &lt;figure &gt;
@@ -612,16 +625,17 @@ class=&quot;math-display-block&quot;&gt;
 &lt;ul&gt;
 &lt;li&gt;I think I’d like to add a way to color the routes the same as the website, but I couldn’t find a programmatic way beyond hard coding. Same can be said for a label.&lt;&#x2F;li&gt;
 &lt;li&gt;The aspect ratio of the map isn’t set.&lt;&#x2F;li&gt;
-&lt;li&gt;If a bus switches routes (e.g. HDG&#x2F;HWD), this map is only able of displaying the route currently being driven. See &lt;a href=&quot;.&#x2F;all_routes_alt.png&quot;&gt;this&lt;&#x2F;a&gt; image for an example. If the program was left running, there might be a way to layer every route driven.&lt;&#x2F;li&gt;
+&lt;li&gt;If a bus switches routes (e.g. HDG&#x2F;HWD), this map is only able of displaying the route currently being driven. See &lt;a href=&quot;https:&#x2F;&#x2F;www.mattnewcomer.org&#x2F;blog&#x2F;2023-01-14-01&#x2F;.&#x2F;all_routes_alt.png&quot;&gt;this&lt;&#x2F;a&gt; image for an example. If the program was left running, there might be a way to layer every route driven.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </description>
-        </item>
-        <item>
-            <title>Stormy Days</title>
-            <pubDate>Thu, 12 Jan 2023 00:00:00 +0000</pubDate>
-            <link>https://www.mattnewcomer.org/blog/2023-01-12-01/</link>
-            <guid>https://www.mattnewcomer.org/blog/2023-01-12-01/</guid>
-            <description>&lt;p&gt;Life changes quickly, yet somehow it moves even faster.&lt;&#x2F;p&gt;
+      </item>
+      <item>
+          <title>Stormy Days</title>
+          <pubDate>Thu, 12 Jan 2023 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://www.mattnewcomer.org/blog/2023-01-12-01/</link>
+          <guid>https://www.mattnewcomer.org/blog/2023-01-12-01/</guid>
+          <description>&lt;p&gt;Life changes quickly, yet somehow it moves even faster.&lt;&#x2F;p&gt;
 &lt;p&gt;Packed schedules, to-do lists, and obligations keep the accelerator pinned to the floor.&lt;&#x2F;p&gt;
 &lt;p&gt;Nuanced opinions, complicated feelings, and distant aspirations cloud your mind.&lt;&#x2F;p&gt;
 &lt;p&gt;The world around just keeps moving.&lt;&#x2F;p&gt;
@@ -632,13 +646,14 @@ class=&quot;math-display-block&quot;&gt;
 &lt;p&gt;The lightning reminds you of the rushes left to experiences, thunder shakes you at your core.&lt;&#x2F;p&gt;
 &lt;p&gt;Wake up in the morning, pick up the fallen branches, and move on.&lt;&#x2F;p&gt;
 </description>
-        </item>
-        <item>
-            <title>My First Attempt at Photography</title>
-            <pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate>
-            <link>https://www.mattnewcomer.org/blog/2023-01-07-01/</link>
-            <guid>https://www.mattnewcomer.org/blog/2023-01-07-01/</guid>
-            <description>&lt;p&gt;Over the holidays I received a Canon SL3 DSLR camera to toy around with. I don’t have aspirations of starting a photography Instagram feed or anything, I just wanted to be able to preserve things I see around campus and town.&lt;&#x2F;p&gt;
+      </item>
+      <item>
+          <title>My First Attempt at Photography</title>
+          <pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://www.mattnewcomer.org/blog/2023-01-07-01/</link>
+          <guid>https://www.mattnewcomer.org/blog/2023-01-07-01/</guid>
+          <description>&lt;p&gt;Over the holidays I received a Canon SL3 DSLR camera to toy around with. I don’t have aspirations of starting a photography Instagram feed or anything, I just wanted to be able to preserve things I see around campus and town.&lt;&#x2F;p&gt;
 &lt;p&gt;Last week I decided to take a few minutes to try using it for the first time around campus. Here’s what I got:&lt;&#x2F;p&gt;
 &lt;figure &gt;
     &lt;a href=.&amp;#x2F;theatre101_full.jpg&gt;
@@ -699,13 +714,14 @@ class=&quot;math-display-block&quot;&gt;
 &lt;p&gt;I decided to shoot in aperture drive mode and oh boy did I overestimate how small my aperture needed to be. Most of these photos have fast shutter speeds (1&#x2F;500 or less) to compensate for my mistake. The more you know!&lt;&#x2F;p&gt;
 &lt;p&gt;I shot my photos in Canon’s RAW format (CRAW3) and tried to edit them for sharpness while keeping them true to what I saw. Click on any photo for the full resolution jpeg&lt;&#x2F;p&gt;
 </description>
-        </item>
-        <item>
-            <title>Eating Only Potatoes for a Week</title>
-            <pubDate>Tue, 03 Jan 2023 00:00:00 +0000</pubDate>
-            <link>https://www.mattnewcomer.org/blog/2023-01-03-01/</link>
-            <guid>https://www.mattnewcomer.org/blog/2023-01-03-01/</guid>
-            <description>&lt;p&gt;Yeah, I was that guy. I wanted to rock the boat a little to see what it did to me, so I decided to take a week to try the potato diet.&lt;&#x2F;p&gt;
+      </item>
+      <item>
+          <title>Eating Only Potatoes for a Week</title>
+          <pubDate>Tue, 03 Jan 2023 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://www.mattnewcomer.org/blog/2023-01-03-01/</link>
+          <guid>https://www.mattnewcomer.org/blog/2023-01-03-01/</guid>
+          <description>&lt;p&gt;Yeah, I was that guy. I wanted to rock the boat a little to see what it did to me, so I decided to take a week to try the potato diet.&lt;&#x2F;p&gt;
 &lt;p&gt;I originally learned about the diet from &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;slimemoldtimemold.com&#x2F;2022&#x2F;04&#x2F;29&#x2F;potato-diet-community-trial-sign-up-now-lol&#x2F;&quot;&gt;Slime Mold Time Mold&lt;&#x2F;a&gt;’s community trial. Just the prospect of eating one food exclusively was utterly fascinating; well that and I wanted to see what it would do to me. I’ve read about how food impacts your mental state in the past, but I never really noticed that change in myself. Maybe I’ve always eaten a “western” diet, maybe it’s a blind spot I have. Regardless, why not see what happens?&lt;&#x2F;p&gt;
 &lt;p&gt;The ground rules are super simple:&lt;&#x2F;p&gt;
 &lt;ol&gt;
@@ -737,13 +753,14 @@ class=&quot;math-display-block&quot;&gt;
 &lt;p&gt;I think my little experiment was a success; so much so that I want to do it  for a few months. Let’s see how that goes.&lt;&#x2F;p&gt;
 &lt;p&gt;Thank you, humble spud.&lt;&#x2F;p&gt;
 </description>
-        </item>
-        <item>
-            <title>Baking for Fun &amp; Profit</title>
-            <pubDate>Thu, 15 Dec 2022 00:00:00 +0000</pubDate>
-            <link>https://www.mattnewcomer.org/blog/2022-12-15-01/</link>
-            <guid>https://www.mattnewcomer.org/blog/2022-12-15-01/</guid>
-            <description>&lt;p&gt;Baking is one of those activities that has been around for ages, but you don’t just stumble upon it. I was exposed to baking by my grandmother’s breads and my mother’s cookies growing up. Although I never truly understood the skill that went into making such delicious food, I’ve started trying my hand at it.&lt;&#x2F;p&gt;
+      </item>
+      <item>
+          <title>Baking for Fun &amp; Profit</title>
+          <pubDate>Thu, 15 Dec 2022 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://www.mattnewcomer.org/blog/2022-12-15-01/</link>
+          <guid>https://www.mattnewcomer.org/blog/2022-12-15-01/</guid>
+          <description>&lt;p&gt;Baking is one of those activities that has been around for ages, but you don’t just stumble upon it. I was exposed to baking by my grandmother’s breads and my mother’s cookies growing up. Although I never truly understood the skill that went into making such delicious food, I’ve started trying my hand at it.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;for-fun&quot;&gt;For Fun?&lt;&#x2F;h2&gt;
 &lt;p&gt;What’s more fun than making something delicious from scratch with your own two hands? Nothing really comes to mind.&lt;&#x2F;p&gt;
 &lt;p&gt;Bread in its most simple form is &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;www.kingarthurbaking.com&#x2F;recipes&#x2F;peasant-bread-recipe&quot;&gt;flour, water, salt, yeast, and sugar&lt;&#x2F;a&gt;, and it’s downright delicious. You really only need a bowl, a spoon, a pan, and some counter space to get started. Given those items, the only ingredient left is skill. Making a consistent loaf of bread requires skill and almost becomes like a game to best yourself each time you try. It’s a low stakes game that 99% of the time yields fresh food to enjoy. &lt;em&gt;That and your house smells &lt;strong&gt;amazing&lt;&#x2F;strong&gt; for 3-5 days afterwards.&lt;&#x2F;em&gt; What’s not to love?&lt;&#x2F;p&gt;
@@ -758,13 +775,14 @@ class=&quot;math-display-block&quot;&gt;
 &lt;p&gt;Despite the age of the &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;upload.wikimedia.org&#x2F;wikipedia&#x2F;commons&#x2F;2&#x2F;25&#x2F;The_chemistry_of_breadmaking_%28IA_0276CHEM%29.pdf&quot;&gt;book&lt;&#x2F;a&gt;, pages 168-186 of the PDF do a fair job summarizing the chemical process of baking bread.&lt;&#x2F;p&gt;
 &lt;&#x2F;div&gt;
 </description>
-        </item>
-        <item>
-            <title>Living With a Dumb Phone</title>
-            <pubDate>Tue, 13 Dec 2022 00:00:00 +0000</pubDate>
-            <link>https://www.mattnewcomer.org/blog/2022-12-13-01/</link>
-            <guid>https://www.mattnewcomer.org/blog/2022-12-13-01/</guid>
-            <description>&lt;p&gt;In October of 2022 I sold my shiny iPhone 11 Pro Max and traded to a credit card sized monochrome brick of a “smart” phone. This article is a summary of my experience ditching my old phone and moving to a credit card sized minimal phone.&lt;&#x2F;p&gt;
+      </item>
+      <item>
+          <title>Living With a Dumb Phone</title>
+          <pubDate>Tue, 13 Dec 2022 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://www.mattnewcomer.org/blog/2022-12-13-01/</link>
+          <guid>https://www.mattnewcomer.org/blog/2022-12-13-01/</guid>
+          <description>&lt;p&gt;In October of 2022 I sold my shiny iPhone 11 Pro Max and traded to a credit card sized monochrome brick of a “smart” phone. This article is a summary of my experience ditching my old phone and moving to a credit card sized minimal phone.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;wait-why-did-i-sell-my-pocket-supercomputer&quot;&gt;Wait, Why Did I Sell My Pocket Supercomputer?&lt;&#x2F;h2&gt;
 &lt;p&gt;Like many other people my age, I grew up with a smart phone always within arm’s reach. I never really questioned why I needed such a device at such a young age because it was new and the cool thing to have. The first time I noticed that I disliked my smartphone was because it was become a crutch in way too many situations. By crutch, I mean a thing that you depend on to the point of reliance. Once I realized that I was beholden to the smartphone I started to notice other things.&lt;&#x2F;p&gt;
 &lt;p&gt;iPhones have this cool feature where they record the amount of time you spend on your phone per day and in which apps you spend your time. On every Sunday(?) it sends you a notification to review your screen time and &lt;em&gt;&lt;strong&gt;holy moly&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt; was I spending a lot of time doing mindless things. It wound up being like 4+ hours &lt;em&gt;per day&lt;&#x2F;em&gt; using my phone for absolutely no reason. Half of this number was me lackign the self control to put it down and do something else, but I’d also like to believe that the other half was these apps being so damn addictive. Bright colors, incessant notifications, my friends using them … all key ingredients on getting me to keep coming back. Strike 1 for the iPhone.&lt;&#x2F;p&gt;
@@ -950,19 +968,20 @@ class=&quot;math-display-block&quot;&gt;
 &lt;p&gt;The workaround I use is a magnetic adapter that has two parts; one that stays in the phone and one that connects to a USB-C cable. This reduces port wear on the phone which increases its lifespan while allowing me to use the superior USB-C connector. No data is transferred via this port, so you don’t have to find a connector that does data in addition to power.&lt;&#x2F;p&gt;
 &lt;&#x2F;div&gt;
 </description>
-        </item>
-        <item>
-            <title>100 Days To Offload</title>
-            <pubDate>Wed, 07 Dec 2022 00:00:00 +0000</pubDate>
-            <link>https://www.mattnewcomer.org/blog/2022-12-07-01/</link>
-            <guid>https://www.mattnewcomer.org/blog/2022-12-07-01/</guid>
-            <description>&lt;p&gt;I’m not that great at writing.&lt;&#x2F;p&gt;
+      </item>
+      <item>
+          <title>100 Days To Offload</title>
+          <pubDate>Wed, 07 Dec 2022 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://www.mattnewcomer.org/blog/2022-12-07-01/</link>
+          <guid>https://www.mattnewcomer.org/blog/2022-12-07-01/</guid>
+          <description>&lt;p&gt;I’m not that great at writing.&lt;&#x2F;p&gt;
 &lt;p&gt;Whenever I think about writing, I feel a big swell of anxiety and inevitably say I’ll do it tomorrow. It’s primarily because hitting post feels like yelling into the void for someone to read my thoughts. The Internet also has a magical way of letting words stick around forever.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;em&gt;Pretty scary stuff.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;Recently, I found &lt;a rel=&quot;noreferrer&quot; href=&quot;https:&#x2F;&#x2F;100daystooffload.com&#x2F;&quot;&gt;100 Days To Offload&lt;&#x2F;a&gt;. It’s a challenge to write and upload 100 posts within a year. The challenge sounds like a weird way to &lt;em&gt;&lt;strong&gt;jumpstart your blog with this 1 easy trick they don’t want you to know about&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;, but it’s more a deadline for me to work against.&lt;&#x2F;p&gt;
 &lt;p&gt;From 1 January 2023 to 31 December 2023, I plan to upload 100 things.&lt;&#x2F;p&gt;
 &lt;p&gt;Plain and simple.&lt;&#x2F;p&gt;
 </description>
-        </item>
+      </item>
     </channel>
 </rss>
