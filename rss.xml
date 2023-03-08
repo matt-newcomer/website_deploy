@@ -7,7 +7,24 @@
       <generator>Zola</generator>
       <language>en</language>
       <atom:link href="https://www.mattnewcomer.org/rss.xml" rel="self" type="application/rss+xml"/>
-      <lastBuildDate>Sat, 25 Feb 2023 00:00:00 +0000</lastBuildDate>
+      <lastBuildDate>Tue, 07 Mar 2023 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>p5.js Demonstration</title>
+          <pubDate>Tue, 07 Mar 2023 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://www.mattnewcomer.org/blog/2023-03-07-01/</link>
+          <guid>https://www.mattnewcomer.org/blog/2023-03-07-01/</guid>
+          <description>&lt;script 
+src=&quot;game_of_life.js&quot; 
+type=&quot;application&#x2F;javascript&quot; 
+referrerpolicy=&quot;no-referrer&quot; 
+&gt;&lt;&#x2F;script&gt;
+&lt;p&gt;I’d like to quickly show off p5.js running &lt;a rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Conway%27s_game_of_life&quot;&gt;Conway’s Game of Life&lt;&#x2F;a&gt; in the browser. The underlying JS was taken from an &lt;a rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;p5js.org&#x2F;examples&#x2F;simulate-game-of-life.html&quot;&gt;example&lt;&#x2F;a&gt;. Although the game should be played on an infinite grid, a finite one is the best I can do for now.&lt;&#x2F;p&gt;
+&lt;div id=&quot;conways_game_of_life_wrapper&quot;&gt;&lt;&#x2F;div&gt;
+&lt;div id=&quot;button_overflow&quot;&gt; &lt;&#x2F;div&gt;
+&lt;p&gt;If you notice any bugs with the simulation, please let me know. &lt;&#x2F;p&gt;
+</description>
+      </item>
       <item>
           <title>Writing as a Weapon</title>
           <pubDate>Fri, 24 Feb 2023 00:00:00 +0000</pubDate>
@@ -195,7 +212,13 @@
           <author>Unknown</author>
           <link>https://www.mattnewcomer.org/blog/2023-02-12-01/</link>
           <guid>https://www.mattnewcomer.org/blog/2023-02-12-01/</guid>
-          <description>&lt;p&gt;&lt;noscript&gt;This page won’t display any updating dates or times with JavaScript disabled. Sorry!&lt;&#x2F;noscript&gt;&lt;&#x2F;p&gt;
+          <description>&lt;p&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;clock.css&quot; defer&#x2F;&gt;
+&lt;script 
+src=&quot;clock.js&quot; 
+type=&quot;application&#x2F;javascript&quot; 
+referrerpolicy=&quot;no-referrer&quot; 
+&gt;&lt;&#x2F;script&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;noscript&gt;This page won’t display any updating dates or times with JavaScript disabled. Sorry!&lt;&#x2F;noscript&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;I regret to inform you that some computers might have a bad time in a little while. Specifically, on&lt;&#x2F;p&gt;
 &lt;div class = &quot;clock_text&quot;&gt;Tue, 19 January 2038 03:14:07 GMT&lt;&#x2F;div&gt;
 &lt;p&gt;systems that store &lt;a rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Unix_time&quot;&gt;Unix time&lt;&#x2F;a&gt;stamps in 32-bit &lt;a rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Two%27s_complement&quot;&gt;two’s complement&lt;&#x2F;a&gt; representation will… run out of time. Right now, the current time is represented as &lt;&#x2F;p&gt;
@@ -206,12 +229,6 @@
 &lt;div class = &quot;clock_text&quot;&gt;&lt;p id=&quot;time_left&quot;&gt;0 years, 0 days, 0 hours, 0 minutes, 0 seconds&lt;&#x2F;p&gt;&lt;&#x2F;div&gt;
 &lt;p&gt;away&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;. Until then, the &lt;a rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Unix_time&quot;&gt;year 2038 problem&lt;&#x2F;a&gt; lies in wait.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; This code has purposefully not been tested for what will happen 20 January 2038.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;link rel=&quot;stylesheet&quot;  href=&quot;clock.css&quot; defer&#x2F;&gt;
-&lt;script 
-src=&quot;clock.js&quot; 
-type=&quot;application&#x2F;javascript&quot; 
-referrerpolicy=&quot;no-referrer&quot; 
-&gt;&lt;&#x2F;script&gt;&lt;&#x2F;p&gt;
 </description>
       </item>
       <item>
