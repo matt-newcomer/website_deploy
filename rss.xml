@@ -7,7 +7,7 @@
       <generator>Zola</generator>
       <language>en</language>
       <atom:link href="https://www.mattnewcomer.org/rss.xml" rel="self" type="application/rss+xml"/>
-      <lastBuildDate>Tue, 07 Mar 2023 00:00:00 +0000</lastBuildDate>
+      <lastBuildDate>Wed, 08 Mar 2023 00:00:00 +0000</lastBuildDate>
       <item>
           <title>p5.js Demonstration</title>
           <pubDate>Tue, 07 Mar 2023 00:00:00 +0000</pubDate>
@@ -21,7 +21,12 @@ referrerpolicy=&quot;no-referrer&quot;
 &gt;&lt;&#x2F;script&gt;
 &lt;p&gt;I’d like to quickly show off p5.js running &lt;a rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Conway%27s_game_of_life&quot;&gt;Conway’s Game of Life&lt;&#x2F;a&gt; in the browser. The underlying JS was taken from an &lt;a rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;p5js.org&#x2F;examples&#x2F;simulate-game-of-life.html&quot;&gt;example&lt;&#x2F;a&gt;. Although the game should be played on an infinite grid, a finite one is the best I can do for now.&lt;&#x2F;p&gt;
 &lt;div id=&quot;conways_game_of_life_wrapper&quot;&gt;&lt;&#x2F;div&gt;
-&lt;div id=&quot;button_overflow&quot;&gt; &lt;&#x2F;div&gt;
+&lt;div id=&quot;button_overflow&quot; 
+style=&quot;display: flex; 
+width: 100%; 
+justify-content:center;
+align-items:center; 
+flex-wrap:wrap;&quot;&gt; &lt;&#x2F;div&gt;
 &lt;p&gt;If you notice any bugs with the simulation, please let me know. &lt;&#x2F;p&gt;
 </description>
       </item>

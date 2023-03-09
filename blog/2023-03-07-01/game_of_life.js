@@ -1,15 +1,25 @@
 const GAME_DIV_ID = "conways_game_of_life_wrapper";
 const BUTTON_DIV_ID = "button_overflow";
-const CELL_WIDTH = 10;
+
 const FRAME_RATE = 10;
+
+const CELL_WIDTH = 10;
+
 const BUTTON_WIDTH = 60;
+const BUTTON_MIN_WIDTH = 40;
 const BUTTON_HEIGHT = 30;
-const BUTTON_H_PADDING = 5;
+const BUTTON_PADDING = 5;
+const STATE_FIELD_WIDTH = 250;
+const STATE_FIELD_MIN_WIDTH = 150;
+
+const MAX_CANVAS_HEIGHT = 600;
+const MAX_CANVAS_WIDTH = 600;
+
 let columns, rows;
 let board, next;
 let paused = false;
 let wrapping_div;
-let clearButton, pauseButton, resetButton;
+let clearButton, pauseButton, resetButton, importButton, exportButton, stateField;
 
 // Initial board width and height, updated on first draw
 let width = 0;
@@ -27,29 +37,42 @@ function setup() {
 
   clearButton = createButton('Clear');
   clearButton.parent(BUTTON_DIV_ID);
-  clearButton.size(BUTTON_WIDTH, BUTTON_HEIGHT)
-  clearButton.position(0, 0, 'relative');
+  setButtonStyle(clearButton);
   clearButton.mousePressed(clearGame);
 
   pauseButton = createButton('Pause');
   pauseButton.parent(BUTTON_DIV_ID);
-  pauseButton.position(clearButton.x + BUTTON_H_PADDING, 0, 'relative');
-  pauseButton.size(BUTTON_WIDTH, BUTTON_HEIGHT);
+  setButtonStyle(pauseButton);
   pauseButton.mousePressed(toggleGamePause);
 
   resetButton = createButton('Reset');
   resetButton.parent(BUTTON_DIV_ID);
-  resetButton.position(pauseButton.x + BUTTON_H_PADDING, 0, 'relative');
-  resetButton.size(BUTTON_WIDTH, BUTTON_HEIGHT);
+  setButtonStyle(resetButton);
   resetButton.mousePressed(resetGame);
+
+  exportButton = createButton('Export');
+  exportButton.parent(BUTTON_DIV_ID);
+  setButtonStyle(exportButton);
+  exportButton.mousePressed(exportGameState);
+  toggleButtonAvailability(exportButton);
+
+  importButton = createButton('Import');
+  importButton.parent(BUTTON_DIV_ID);
+  setButtonStyle(importButton);
+  importButton.mousePressed(importGameState);
+  toggleButtonAvailability(importButton);
+
+  stateField = createInput();
+  stateField.parent(BUTTON_DIV_ID);
+  setFieldStyle(stateField)
 
   initialize(true);
 }
 
 function updateCanvasSize() {
   let position_info = wrapping_div.getBoundingClientRect();
-  width = Math.floor(position_info.width / CELL_WIDTH) * CELL_WIDTH
-  height = 600;
+  width = Math.min(Math.floor(position_info.width / CELL_WIDTH) * CELL_WIDTH, MAX_CANVAS_WIDTH);
+  height = MAX_CANVAS_HEIGHT;
   resizeCanvas(width, height);
 }
 
@@ -59,6 +82,18 @@ function updateGridSize() {
 }
 
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+function setButtonStyle(button) {
+  button.elt.style = `width: ${BUTTON_WIDTH}px; min-width: ${BUTTON_MIN_WIDTH}px; height: ${BUTTON_HEIGHT}px; margin: ${BUTTON_PADDING}px; display: block;`
+}
+
+function setFieldStyle(field) {
+  field.elt.style = `width: ${STATE_FIELD_WIDTH}px; min-width: ${STATE_FIELD_MIN_WIDTH}px; height: ${BUTTON_HEIGHT}px; margin: ${BUTTON_PADDING}px; display: block;`
+}
+
+function toggleButtonAvailability(button) {
+  button.elt.disabled = !button.elt.disabled;
+}
 
 function resetGame() {
   if (!paused) toggleGamePause();
@@ -73,6 +108,71 @@ function clearGame() {
 function toggleGamePause() {
   paused = !paused;
   pauseButton.html(paused ? "Play" : "Pause");
+  toggleButtonAvailability(exportButton);
+  toggleButtonAvailability(importButton);
+}
+
+/*
+ * Transform the current board state into a base32 string in the following format
+ * width*height@base32 data
+ */
+function exportGameState() {
+  if (!paused) toggleGamePause();
+  let boardState = board.toString().replaceAll(',', '');
+  let base32 = ''
+  for (let index = 0; index < boardState.length; index += 5) {
+    let substr = boardState.substring(index, index + 5);
+    base32 += parseInt(substr, 2).toString(32);
+  }
+  stateField.value(`${columns}*${rows}@${base32}`);
+}
+
+/*
+ * Parse the base32 data and update the board state to match
+ */
+function importGameState() {
+  if (!paused) toggleGamePause();
+  base32 = stateField.value();
+  if (base32 === "") {
+    alert("No import string provided.");
+    return;
+  }
+
+  let asterisk_index = base32.indexOf("*")
+  let at_index = base32.indexOf("@");
+  if (asterisk_index <= 0 || at_index === -1 || at_index === asterisk_index + 1) {
+    alert("The base32 encoded string you provided is missing at least one dimension.")
+    return;
+  }
+  let state_columns = base32.substring(0, asterisk_index)
+  let state_rows = base32.substring(asterisk_index + 1, at_index);
+
+  if (columns < state_columns) {
+    alert("The width of the current grid is not large enough to import this game state.");
+    return;
+  }
+  if (rows < state_rows) {
+    alert("The height of the current grid is not large enough to import this game state.");
+    return;
+  }
+
+  let x = 0;
+  let y = 0;
+
+  for (let substr of base32.substring(at_index + 1)) {
+    digit = parseInt(substr, 32);
+    digit = digit.toString(2).padStart(5, '0');
+    for (let bit of digit) {
+      board[x][y] = parseInt(bit, 2)
+      if (y === state_rows - 1) {
+        y = 0
+        x += 1;
+      }
+      else {
+        y++;
+      }
+    }
+  }
 }
 
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
@@ -113,12 +213,12 @@ function initialize(shouldRandomize) {
 
 function draw() {
   background(255);
-  for (let i = 0; i < columns; i++) {
-    for (let j = 0; j < rows; j++) {
-      if ((board[i][j] == 1)) fill(0);
+  for (let x = 0; x < columns; x++) {
+    for (let y = 0; y < rows; y++) {
+      if ((board[x][y] == 1)) fill(0);
       else fill(255);
       stroke(0);
-      rect(i * CELL_WIDTH, j * CELL_WIDTH, CELL_WIDTH - 1, CELL_WIDTH - 1);
+      rect(x * CELL_WIDTH, y * CELL_WIDTH, CELL_WIDTH - 1, CELL_WIDTH - 1);
     }
   }
   if (paused) return;
